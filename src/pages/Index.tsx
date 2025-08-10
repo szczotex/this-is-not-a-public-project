@@ -1,38 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer } from "lucide-react";
+import Header from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground page-texture">
-      <header className="border-b">
-        <div className="container flex items-center justify-between py-4">
-          <a href="#" className="flex items-center" aria-label="Strona główna modu.energy">
-            <img src="/brand/Screenshot%202025-07-28%20at%2014.27.11.png" alt="modu.energy logo" className="h-6 md:h-7 w-auto" />
-          </a>
-          <Button asChild variant="hero" size="sm">
-            <a href="#formularz" aria-label="Przejdź do formularza">Rozpocznij</a>
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero */}
         <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
-              src="/images/aerial-shot-industrial-buildings-bristol-england.jpg"
+              src="/images/background.jpg"
               alt=""
               aria-hidden="true"
               className="h-full w-full object-cover"
               loading="eager"
+              onError={(e) => { e.currentTarget.src = "/lovable-uploads/66081494-c40e-49a2-9999-4b9eac6f619b.png"; }}
             />
             <div className="absolute inset-0 bg-foreground/60" />
           </div>
           <div className="container py-20 md:py-28">
             <div className="mx-auto max-w-3xl text-center animate-enter text-primary-foreground">
               <h1 className="whitespace-nowrap text-3xl md:text-5xl font-semibold leading-tight">
-                Obniż koszty energii, nawet do 30%.
+                Obniż koszty energii dla swojej firmy, nawet do 25%
               </h1>
               <p className="mt-3 mb-6 text-lg md:text-xl text-primary-foreground/90">
                 Bez inwestycji. Bez straty czasu.
@@ -133,21 +126,23 @@ const Index = () => {
         </section>
 
         {/* Form CTA */}
-        <section id="formularz" className="container py-12 md:py-20">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold">
-              Sprawdź potencjalne oszczędności w swojej firmie, bez zobowiązań
-            </h2>
-            <div className="mt-4 text-left inline-block text-muted-foreground">
-              <ul className="list-disc pl-5 space-y-2">
-                <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
-                <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
-              </ul>
-            </div>
-            <div className="mt-6">
-              <Button asChild variant="hero" size="lg">
-                <a href="https://tally.so/forms/mV6Jvl/edit">Sprawdź ile możesz zaoszczędzić</a>
-              </Button>
+        <section id="formularz" className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
+          <div className="container">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-2xl md:text-3xl font-semibold">
+                Sprawdź potencjalne oszczędności w swojej firmie, bez zobowiązań
+              </h2>
+              <div className="mt-4 text-left inline-block text-muted-foreground">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
+                  <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
+                </ul>
+              </div>
+              <div className="mt-6">
+                <Button asChild variant="hero" size="lg">
+                  <a href="https://tally.so/forms/mV6Jvl/edit">Sprawdź ile możesz zaoszczędzić</a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
