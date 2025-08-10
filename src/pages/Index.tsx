@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { HandCoins, Wrench, BatteryCharging, Building2, Sun, Gauge } from "lucide-react";
+import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-texture">
       <header className="border-b">
         <div className="container flex items-center justify-between py-4">
-          <a href="#" className="text-lg font-semibold tracking-tight">modu.energy</a>
+          <a href="#" className="flex items-center" aria-label="Strona główna modu.energy">
+            <img src="/brand/modu-energy-logo.png" alt="modu.energy logo" className="h-6 md:h-7 w-auto" />
+          </a>
           <Button asChild variant="hero" size="sm">
             <a href="#formularz" aria-label="Przejdź do formularza">Rozpocznij</a>
           </Button>
@@ -16,14 +18,26 @@ const Index = () => {
 
       <main>
         {/* Hero */}
-        <section className="container py-20 md:py-28">
-          <div className="mx-auto max-w-3xl text-center animate-enter">
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
-              Obniż koszty energii, nawet do 30%. Bez inwestycji.
-            </h1>
-            <Button asChild variant="hero" size="lg">
-              <a href="#formularz" aria-label="Przewiń do formularza">Rozpocznij</a>
-            </Button>
+        <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <img
+              src="/images/hero-industrial-solar.jpg"
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-foreground/60" />
+          </div>
+          <div className="container py-20 md:py-28">
+            <div className="mx-auto max-w-3xl text-center animate-enter text-primary-foreground">
+              <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
+                Obniż koszty energii, nawet do 30%. Bez inwestycji.
+              </h1>
+              <Button asChild variant="hero" size="lg">
+                <a href="#formularz" aria-label="Przewiń do formularza">Rozpocznij</a>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -34,7 +48,7 @@ const Index = () => {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <HandCoins className="text-foreground" />
-                  <CardTitle className="text-xl">Finansowanie dopasowane do Ciebie</CardTitle>
+                  <CardTitle className="text-xl">Finansujemy całość inwestycji</CardTitle>
                 </div>
                 <CardDescription>
                   Finansujemy magazyn energii, dopasowany do klienta na podstawie naszych analiz.
@@ -58,10 +72,10 @@ const Index = () => {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <BatteryCharging className="text-foreground" />
-                  <CardTitle className="text-xl">Optymalizacja i podział zysków</CardTitle>
+                  <CardTitle className="text-xl">Podział zysków</CardTitle>
                 </div>
                 <CardDescription>
-                  Optymalizujemy konsumpcję energii, dzieląc oszczędności między klienta a modu.energy.
+                  Optymalizujemy zużycie energii, tworząc oszczędności kosztowe dla naszych klientów.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -69,29 +83,40 @@ const Index = () => {
         </section>
 
         {/* ICP */}
+        {/* ICP */}
         <section className="container py-8 md:py-14">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">Kogo szukamy?</h2>
             <Card>
               <CardContent className="pt-6">
-                <p className="text-muted-foreground mb-4">
-                  Dopiero zaczynamy i nie jesteśmy w stanie pomóc wszystkim. Idealni klienci których szukamy cechują się:
+                <p className="text-muted-foreground mb-6">
+                  Dopiero zaczynamy i nie jesteśmy w stanie pomóc wszystkim. Cechy idealnego klienta:
                 </p>
-                <ul className="space-y-2 list-disc pl-5">
-                  <li>wysokimi kosztami energii</li>
-                  <li>dużym poborem w okresach wysokiego zapotrzebowania (rano, wieczór)</li>
-                  <li>istniejącą fotowoltaiką</li>
-                  <li>dużym, niewykorzystanym przyłączem</li>
-                  <li>taryfą o wielu-strefach / dynamiczną, lub chęcią zmiany obecnej</li>
-                </ul>
+                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                  <div className="flex items-center gap-3 text-sm">
+                    <Sun aria-hidden className="text-foreground" />
+                    <span>istniejąca fotowoltaika</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm">
+                    <Factory aria-hidden className="text-foreground" />
+                    <span>obiekt przemysłowy / komercyjny</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm">
+                    <Gauge aria-hidden className="text-foreground" />
+                    <span>wysoki pobór mocy (&gt;100MWh rocznie)</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm">
+                    <Plug aria-hidden className="text-foreground" />
+                    <span>duża moc przyłącza</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm">
+                    <Timer aria-hidden className="text-foreground" />
+                    <span>taryfa wielostrefowa</span>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
                   Jeśli nie masz pewności, czy się kwalifikujesz — wyślij formularz. Wrócimy z odpowiedzią w kilka dni.
                 </p>
-                <div className="grid grid-cols-3 gap-4 mt-6">
-                  <div className="flex items-center gap-2 text-sm"><Building2 /> Obiekt komercyjny</div>
-                  <div className="flex items-center gap-2 text-sm"><Sun /> Fotowoltaika</div>
-                  <div className="flex items-center gap-2 text-sm"><Gauge /> Wysoki pobór</div>
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -105,7 +130,7 @@ const Index = () => {
             </h2>
             <div className="mt-4 text-left inline-block text-muted-foreground">
               <ul className="list-disc pl-5 space-y-2">
-                <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie klienta</li>
+                <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
                 <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
               </ul>
             </div>
