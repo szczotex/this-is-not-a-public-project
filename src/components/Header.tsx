@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <a href="/" className="flex items-center" aria-label="Strona główna modu.energy">
             <img
-              src="/brand/modu-logo.png"
+              src="/modu-logo.png"
               alt="modu.energy logo"
               className="h-6 md:h-7 w-auto"
               onError={(e) => {
@@ -22,7 +22,7 @@ const Header = () => {
           </nav>
         </div>
         <Button asChild variant="hero" size="sm">
-          <a href="/#formularz" aria-label="Przejdź do formularza">Rozpocznij</a>
+          <a href="/#formularz" aria-label="Przejdź do formularza">Darmowa analiza</a>
         </Button>
       </div>
     </header>

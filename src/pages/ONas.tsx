@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const ONas = () => {
   return (
@@ -12,11 +13,7 @@ const ONas = () => {
           </div>
         </section>
       </main>
-      <footer className="border-t">
-        <div className="container py-6 text-sm text-muted-foreground flex items-center justify-between">
-          <span>© {new Date().getFullYear()} modu.energy</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

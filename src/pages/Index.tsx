@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -13,9 +14,8 @@ const Index = () => {
         <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
-              src="/images/background.jpg"
-              alt=""
-              aria-hidden="true"
+              src="/background.jpg"
+              alt="Tło nagłówka: przemysłowe budynki – modu.energy"
               className="h-full w-full object-cover"
               loading="eager"
               onError={(e) => { e.currentTarget.src = "/lovable-uploads/66081494-c40e-49a2-9999-4b9eac6f619b.png"; }}
@@ -24,14 +24,15 @@ const Index = () => {
           </div>
           <div className="container py-20 md:py-28">
             <div className="mx-auto max-w-3xl text-center animate-enter text-primary-foreground">
-              <h1 className="whitespace-nowrap text-3xl md:text-5xl font-semibold leading-tight">
-                Obniż koszty energii dla swojej firmy, nawet do 25%
+              <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
+                Obniż koszty energii dla swojej firmy,
+                <br className="hidden sm:block" /> nawet do 25%
               </h1>
               <p className="mt-3 mb-6 text-lg md:text-xl text-primary-foreground/90">
                 Bez inwestycji. Bez straty czasu.
               </p>
               <Button asChild variant="hero" size="lg">
-                <a href="#formularz" aria-label="Przewiń do formularza">Rozpocznij</a>
+                <a href="#formularz" aria-label="Przewiń do formularza">Darmowa analiza</a>
               </Button>
             </div>
           </div>
@@ -40,6 +41,9 @@ const Index = () => {
         {/* Features */}
         <section className="relative py-8 md:py-14 bg-muted/40 page-texture border-t">
           <div className="container">
+            <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
+              Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
+            </h2>
             <div className="grid gap-6 md:grid-cols-3">
               <Card className="transition-transform duration-200 hover:scale-[1.02]">
                 <CardHeader>
@@ -91,7 +95,7 @@ const Index = () => {
         <section className="relative py-8 md:py-14 bg-background page-texture border-t">
           <div className="container">
             <div className="mx-auto max-w-4xl">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Kogo szukamy?</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Jakich firm szukamy?</h2>
               <Card>
                 <CardContent className="pt-6">
                   <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -128,32 +132,42 @@ const Index = () => {
         {/* Form CTA */}
         <section id="formularz" className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
           <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-2xl md:text-3xl font-semibold">
-                Sprawdź potencjalne oszczędności w swojej firmie, bez zobowiązań
-              </h2>
-              <div className="mt-4 text-left inline-block text-muted-foreground">
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
-                  <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
-                </ul>
-              </div>
-              <div className="mt-6">
-                <Button asChild variant="hero" size="lg">
-                  <a href="https://tally.so/forms/mV6Jvl/edit">Sprawdź ile możesz zaoszczędzić</a>
-                </Button>
-              </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-semibold">Skontaktuj się z nami!</h3>
+                  <div className="mt-4 text-muted-foreground">
+                    <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+                    <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="text-center">
+                    <h2 className="text-2xl md:text-3xl font-semibold">
+                      Sprawdź potencjalne oszczędności w swojej firmie, bez zobowiązań
+                    </h2>
+                    <div className="mt-4 text-left inline-block text-muted-foreground">
+                      <ul className="list-disc pl-5 space-y-2">
+                        <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
+                        <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
+                      </ul>
+                    </div>
+                    <div className="mt-6">
+                      <Button asChild variant="hero" size="lg">
+                        <a href="https://tally.so/forms/mV6Jvl/edit">Sprawdź ile możesz zaoszczędzić</a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t">
-        <div className="container py-6 text-sm text-muted-foreground flex items-center justify-between">
-          <span>© {new Date().getFullYear()} modu.energy</span>
-          
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
