@@ -49,7 +49,7 @@ const Index = () => {
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <HandCoins className="text-foreground" />
-                    <CardTitle className="text-xl">
+                    <CardTitle className="text-lg md:text-xl">
                       Finansujemy całość<br />inwestycji
                     </CardTitle>
                   </div>
@@ -60,8 +60,8 @@ const Index = () => {
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <Wrench className="text-foreground" />
-                    <CardTitle className="text-xl">
-                      Załatwiamy formalności i instalację na miejscu
+                    <CardTitle className="text-lg md:text-xl">
+                      Załatwiamy formalności i instalację za Ciebie
                     </CardTitle>
                   </div>
                 </CardHeader>
@@ -71,8 +71,8 @@ const Index = () => {
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <BatteryCharging className="text-foreground" />
-                    <CardTitle className="text-xl">
-                      Podział zysków z optymalizacji zużycia energii
+                    <CardTitle className="text-lg md:text-xl">
+                      Dzielimy się zyskami z magazynu
                     </CardTitle>
                   </div>
                 </CardHeader>
@@ -134,13 +134,6 @@ const Index = () => {
       <CardContent className="pt-4">
         <div className="grid gap-6 md:grid-cols-2 items-start">
           <div>
-            <h3 className="text-xl font-semibold">Masz pytania?</h3>
-            <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
-              <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
-              <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
-            </div>
-          </div>
-          <div>
             <h3 className="text-xl font-semibold">Własna analiza</h3>
             <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground">
               <li>darmowa ocena</li>
@@ -152,6 +145,13 @@ const Index = () => {
               <Button asChild variant="hero" size="lg">
                 <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa analiza</a>
               </Button>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Masz pytania?</h3>
+            <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
+              <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+              <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
             </div>
           </div>
         </div>
