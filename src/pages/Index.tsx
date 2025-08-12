@@ -53,9 +53,6 @@ const Index = () => {
                       Finansujemy całość<br />inwestycji
                     </CardTitle>
                   </div>
-                  <CardDescription>
-                    Finansujemy magazyn energii, dopasowany do klienta na podstawie naszych analiz.
-                  </CardDescription>
                 </CardHeader>
               </Card>
 
@@ -64,12 +61,9 @@ const Index = () => {
                   <div className="flex items-center gap-3">
                     <Wrench className="text-foreground" />
                     <CardTitle className="text-xl">
-                      Instalacja i<br />formalności
+                      Załatwiamy formalności i instalację na miejscu
                     </CardTitle>
                   </div>
-                  <CardDescription>
-                    Instalujemy magazyn energii, zajmując się wszystkimi formalnościami.
-                  </CardDescription>
                 </CardHeader>
               </Card>
 
@@ -78,12 +72,9 @@ const Index = () => {
                   <div className="flex items-center gap-3">
                     <BatteryCharging className="text-foreground" />
                     <CardTitle className="text-xl">
-                      Podział<br />zysków
+                      Podział zysków z optymalizacji zużycia energii
                     </CardTitle>
                   </div>
-                  <CardDescription>
-                    Optymalizujemy zużycie energii, tworząc oszczędności kosztowe dla naszych klientów.
-                  </CardDescription>
                 </CardHeader>
               </Card>
             </div>
@@ -136,37 +127,36 @@ const Index = () => {
         {/* Form CTA */}
         <section id="formularz" className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
           <div className="container">
-            <div className="grid gap-6 md:grid-cols-2 items-stretch md:divide-x md:divide-border">
-              <Card>
-                <CardContent className="pt-6 md:pr-6 h-full flex flex-col justify-center">
-                  <div className="text-muted-foreground text-lg md:text-xl space-y-2">
-                    <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
-                    <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
-                  </div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="pt-6 md:pl-6">
-                  <div className="text-center">
-                    <h2 className="text-2xl md:text-3xl font-semibold">
-                      Sprawdź potencjalne oszczędności
-                    </h2>
-                    <div className="mt-4 text-left inline-block text-muted-foreground">
-                      <ul className="list-disc pl-5 space-y-2">
-                        <li>darmowa ocena, oparta na dostarczonych informacjach</li>
-                        <li>zero zobowiązań</li>
-                        <li>szybka odpowiedź, do paru dni</li>
-                      </ul>
-                    </div>
-                    <div className="mt-6">
-                      <Button asChild variant="hero" size="lg">
-                        <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa analiza</a>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-2xl md:text-3xl">Sprawdź ile możesz oszczędzić</CardTitle>
+      </CardHeader>
+      <CardContent className="pt-4">
+        <div className="grid gap-6 md:grid-cols-2 items-start">
+          <div>
+            <h3 className="text-xl font-semibold">Masz pytania?</h3>
+            <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
+              <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+              <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
             </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Własna analiza</h3>
+            <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground">
+              <li>darmowa ocena</li>
+              <li>oparta na dostarczonych informacjach</li>
+              <li>zero zobowiązań</li>
+              <li>szybka odpowiedź, do paru dni</li>
+            </ul>
+            <div className="mt-6">
+              <Button asChild variant="hero" size="lg">
+                <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa analiza</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
           </div>
         </section>
         <section className="relative py-12 md:py-16 bg-background page-texture border-t">
