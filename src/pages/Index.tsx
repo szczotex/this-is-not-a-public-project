@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer } from "lucide-react";
+import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -119,6 +119,10 @@ const Index = () => {
                       <Timer aria-hidden className="text-foreground" />
                       <span>taryfa wielostrefowa</span>
                     </div>
+                    <div className="flex items-center gap-3 text-sm">
+                      <TrendingUp aria-hidden className="text-foreground" />
+                      <span>wysokie koszta energii</span>
+                    </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
                     Każdy przypadek jest odmienny - po analizie dokumentów dostarczonych formularzem, wrócimy z konkretną ofertą możliwych oszczędności
@@ -132,11 +136,10 @@ const Index = () => {
         {/* Form CTA */}
         <section id="formularz" className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
           <div className="container">
-            <div className="grid gap-6 md:grid-cols-2 items-start md:divide-x md:divide-border">
+            <div className="grid gap-6 md:grid-cols-2 items-stretch md:divide-x md:divide-border">
               <Card>
-                <CardContent className="pt-6 md:pr-6">
-                  <h3 className="text-2xl font-semibold">Skontaktuj się z nami!</h3>
-                  <div className="mt-4 text-muted-foreground text-base md:text-lg space-y-1">
+                <CardContent className="pt-6 md:pr-6 h-full flex flex-col justify-center">
+                  <div className="text-muted-foreground text-lg md:text-xl space-y-2">
                     <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
                     <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
                   </div>
@@ -146,17 +149,18 @@ const Index = () => {
                 <CardContent className="pt-6 md:pl-6">
                   <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold">
-                      Sprawdź potencjalne oszczędności w swojej firmie, bez zobowiązań
+                      Sprawdź potencjalne oszczędności
                     </h2>
                     <div className="mt-4 text-left inline-block text-muted-foreground">
                       <ul className="list-disc pl-5 space-y-2">
-                        <li>darmowa ocena potencjału oszczędności, oparta na własnej analizie</li>
-                        <li>szybka i niezobowiązująca ocena - odezwiemy się w przeciągu paru dni</li>
+                        <li>darmowa ocena, oparta na dostarczonych informacjach</li>
+                        <li>zero zobowiązań</li>
+                        <li>szybka odpowiedź, do paru dni</li>
                       </ul>
                     </div>
                     <div className="mt-6">
                       <Button asChild variant="hero" size="lg">
-                        <a href="https://tally.so/forms/mV6Jvl/edit">Sprawdź ile możesz zaoszczędzić</a>
+                        <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa analiza</a>
                       </Button>
                     </div>
                   </div>
