@@ -164,44 +164,60 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Pytanie 1 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
+                <AccordionContent>modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Pytanie 2 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>W jaki sposób modu.energy oszczędza do 25% kosztów energii w mojej firmie?</AccordionTrigger>
+                <AccordionContent>modu.energy osiąga oszczędności i generuje dodatkowy przychód dla klientów poprzez dwa główne kanały. Po pierwsze, zainstalowany na miejscu system magazynowania energii optymalizuje lokalne zużycie, redukując szczyty obciążenia i opłaty mocowe oraz zwiększając autokonsumpcję. Po drugie, elastyczność magazynu energii umożliwia aktywny udział w generacji przychodów z usług wspierających sieć.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Pytanie 3 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Jak modu.energy zarabia na współpracy?</AccordionTrigger>
+                <AccordionContent>Nasz model biznesowy opiera się na współdzieleniu oszczędności i przychodów z udziału w rynkach energii. W ten sposób generujemy przychody, które dzielimy z klientem zgodnie z ustaleniami umowy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger>Pytanie 4 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Jakie jest ryzyko dla klienta?</AccordionTrigger>
+                <AccordionContent>Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Oszczędność z tytułu magazynu energii jest stała, zgodnie z ustaleniami umowy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>Pytanie 5 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Czy modu.energy wymaga zmiany dostawcy energii?</AccordionTrigger>
+                <AccordionContent>Nie, ale wymagamy conajmniej dwu-strefowych taryf obecnego sprzedawcy. W wypadku stałych cen, wspieramy w zmianie obecnej umowy na bardziej korzystną dla klienta.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
-                <AccordionTrigger>Pytanie 6 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Czy modu.energy jest dostawcą energii?</AccordionTrigger>
+                <AccordionContent>Obecnie modu.energy nie jest dostawcą energii - nasze rozwiązania działają niezależnie od istniejącego dostawcy. Naszym głównym zadaniem jest instalacja i obsługa systemów magazynowania energii, które pozwalają na optymalizację kosztów i udział w rynku energii. W przyszłości planujemy jednak oferować model Energy-as-a-Service (EaaS), w którym będziemy zarządzać całością potrzeb energetycznych naszych klientów, najtaniej na rynku.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-7">
-                <AccordionTrigger>Pytanie 7 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Kto jest właścicielem i kto zarządza systemami magazynowania energii modu.energy?</AccordionTrigger>
+                <AccordionContent>modu.energy jest zarówno właścicielem jak i podmiotem odpowiedzialnym za zarządzanie systemami magazynowania energii zainstalowanymi u klienta.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-8">
-                <AccordionTrigger>Pytanie 8 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Jak przebiega instalacja?</AccordionTrigger>
+                <AccordionContent>Nasz zespół zajmuje się kompleksową realizacją projektu: od oceny lokalizacji, przez transport, aż po montaż i uruchomienie systemu. Korzystamy z zaufanych partnerów i zapewniamy pełną integrację z istniejącą infrastrukturą energetyczną firmy. Cały proces trwa zwykle od 3 do 6 miesięcy, przy minimalnym wpływie na działalność Twojej firmy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-9">
-                <AccordionTrigger>Pytanie 9 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Jakie pozwolenia i regulacje obsługujecie?</AccordionTrigger>
+                <AccordionContent>Koordynujemy wszystkie formalności z operatorami sieci dystrybucyjnej i lokalnymi urzędami, zapewniając pełną zgodność z obowiązującymi normami, w tym dotyczącymi bezpieczeństwa. Operatorzy sieci pozytywnie postrzegają nasze systemy, ponieważ przyczyniają się one do stabilizacji lokalnej sieci i optymalizacji obciążeń.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-10">
-                <AccordionTrigger>Pytanie 10 (placeholder)</AccordionTrigger>
-                <AccordionContent>Odpowiedź placeholder.</AccordionContent>
+                <AccordionTrigger>Jakiego typu magazyny energii wykorzystujecie?</AccordionTrigger>
+                <AccordionContent>Stosujemy nowoczesne baterie litowo-jonowe o wysokiej gęstości energii, dużej trwałości i niskich stratach energii. Są one niezawodne i efektywne dla instalacji przemysłowych zintegrowanych z siecią, zapewniając szybkie ładowanie i wysoką elastyczność pracy.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-11">
+                <AccordionTrigger>Jak wygląda serwisowanie?</AccordionTrigger>
+                <AccordionContent>Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową – wszystko w ramach naszej usługi EaaS. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-12">
+                <AccordionTrigger>Czy modu.energy współpracuje z istniejącymi źródłami energii?</AccordionTrigger>
+                <AccordionContent>Tak – nasze rozwiązania magazynowania energii są elastyczne i mogą integrować i optymalizować energię generowaną z zainstalowanych u klienta źródeł. Dzięki temu możemy zaoferować użytkownikowi maksymalne oszczędności.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-13">
+                <AccordionTrigger>Jak modu.energy dba o bezpieczeństwo i zgodność z przepisami?</AccordionTrigger>
+                <AccordionContent>Wszystkie instalacje są projektowane w zgodzie z obowiązującymi normami bezpieczeństwa i lokalnymi regulacjami. Koordynujemy proces uzyskania pozwoleń oraz współpracujemy z operatorami sieci dystrybucyjnej.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-14">
+                <AccordionTrigger>Jak rozpocząć współpracę?</AccordionTrigger>
+                <AccordionContent>Skontaktuj się z nami poprzez udostępniony formularz, aby uzyskać bezpłatną analizę możliwości i oszczędności dostosowaną do Twojej firmy. Przedstawimy model współpracy i konkretne oszczędności które możemy wypracować.</AccordionContent>
               </AccordionItem>
             </Accordion>
             <script
@@ -210,11 +226,78 @@ const Index = () => {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  mainEntity: Array.from({ length: 10 }).map((_, i) => ({
-                    "@type": "Question",
-                    name: `Pytanie ${i + 1} (placeholder)` ,
-                    acceptedAnswer: { "@type": "Answer", text: "Odpowiedź placeholder." },
-                  })),
+                  mainEntity: [
+                    {
+                      "@type": "Question",
+                      name: "Czym jest modu.energy i jak może pomóc mojej firmie?",
+                      acceptedAnswer: { "@type": "Answer", text: "modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "W jaki sposób modu.energy oszczędza do 25% kosztów energii w mojej firmie?",
+                      acceptedAnswer: { "@type": "Answer", text: "modu.energy osiąga oszczędności i generuje dodatkowy przychód dla klientów poprzez dwa główne kanały. Po pierwsze, zainstalowany na miejscu system magazynowania energii optymalizuje lokalne zużycie, redukując szczyty obciążenia i opłaty mocowe oraz zwiększając autokonsumpcję. Po drugie, elastyczność magazynu energii umożliwia aktywny udział w generacji przychodów z usług wspierających sieć." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jak modu.energy zarabia na współpracy?",
+                      acceptedAnswer: { "@type": "Answer", text: "Nasz model biznesowy opiera się na współdzieleniu oszczędności i przychodów z udziału w rynkach energii. W ten sposób generujemy przychody, które dzielimy z klientem zgodnie z ustaleniami umowy." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jakie jest ryzyko dla klienta?",
+                      acceptedAnswer: { "@type": "Answer", text: "Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Oszczędność z tytułu magazynu energii jest stała, zgodnie z ustaleniami umowy." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Czy modu.energy wymaga zmiany dostawcy energii?",
+                      acceptedAnswer: { "@type": "Answer", text: "Nie, ale wymagamy conajmniej dwu-strefowych taryf obecnego sprzedawcy. W wypadku stałych cen, wspieramy w zmianie obecnej umowy na bardziej korzystną dla klienta." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Czy modu.energy jest dostawcą energii?",
+                      acceptedAnswer: { "@type": "Answer", text: "Obecnie modu.energy nie jest dostawcą energii - nasze rozwiązania działają niezależnie od istniejącego dostawcy. Naszym głównym zadaniem jest instalacja i obsługa systemów magazynowania energii, które pozwalają na optymalizację kosztów i udział w rynku energii. W przyszłości planujemy jednak oferować model Energy-as-a-Service (EaaS), w którym będziemy zarządzać całością potrzeb energetycznych naszych klientów, najtaniej na rynku." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Kto jest właścicielem i kto zarządza systemami magazynowania energii modu.energy?",
+                      acceptedAnswer: { "@type": "Answer", text: "modu.energy jest zarówno właścicielem jak i podmiotem odpowiedzialnym za zarządzanie systemami magazynowania energii zainstalowanymi u klienta." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jak przebiega instalacja?",
+                      acceptedAnswer: { "@type": "Answer", text: "Nasz zespół zajmuje się kompleksową realizacją projektu: od oceny lokalizacji, przez transport, aż po montaż i uruchomienie systemu. Korzystamy z zaufanych partnerów i zapewniamy pełną integrację z istniejącą infrastrukturą energetyczną firmy. Cały proces trwa zwykle od 3 do 6 miesięcy, przy minimalnym wpływie na działalność Twojej firmy." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jakie pozwolenia i regulacje obsługujecie?",
+                      acceptedAnswer: { "@type": "Answer", text: "Koordynujemy wszystkie formalności z operatorami sieci dystrybucyjnej i lokalnymi urzędami, zapewniając pełną zgodność z obowiązującymi normami, w tym dotyczącymi bezpieczeństwa. Operatorzy sieci pozytywnie postrzegają nasze systemy, ponieważ przyczyniają się one do stabilizacji lokalnej sieci i optymalizacji obciążeń." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jakiego typu magazyny energii wykorzystujecie?",
+                      acceptedAnswer: { "@type": "Answer", text: "Stosujemy nowoczesne baterie litowo-jonowe o wysokiej gęstości energii, dużej trwałości i niskich stratach energii. Są one niezawodne i efektywne dla instalacji przemysłowych zintegrowanych z siecią, zapewniając szybkie ładowanie i wysoką elastyczność pracy." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jak wygląda serwisowanie?",
+                      acceptedAnswer: { "@type": "Answer", text: "Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową – wszystko w ramach naszej usługi EaaS. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Czy modu.energy współpracuje z istniejącymi źródłami energii?",
+                      acceptedAnswer: { "@type": "Answer", text: "Tak – nasze rozwiązania magazynowania energii są elastyczne i mogą integrować i optymalizować energię generowaną z zainstalowanych u klienta źródeł. Dzięki temu możemy zaoferować użytkownikowi maksymalne oszczędności." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jak modu.energy dba o bezpieczeństwo i zgodność z przepisami?",
+                      acceptedAnswer: { "@type": "Answer", text: "Wszystkie instalacje są projektowane w zgodzie z obowiązującymi normami bezpieczeństwa i lokalnymi regulacjami. Koordynujemy proces uzyskania pozwoleń oraz współpracujemy z operatorami sieci dystrybucyjnej." },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Jak rozpocząć współpracę?",
+                      acceptedAnswer: { "@type": "Answer", text: "Skontaktuj się z nami poprzez udostępniony formularz, aby uzyskać bezpłatną analizę możliwości i oszczędności dostosowaną do Twojej firmy. Przedstawimy model współpracy i konkretne oszczędności które możemy wypracować." },
+                    },
+                  ],
                 }),
               }}
             ></script>
