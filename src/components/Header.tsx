@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="border-b">
+    <header className="border-b bg-white">
       <div className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-6">
           <a href="/" className="flex items-center" aria-label="Strona główna modu.energy">
@@ -22,7 +22,7 @@ const Header = () => {
           </nav>
         </div>
         <Button asChild variant="hero" size="sm">
-          <a href="/#formularz" aria-label="Przejdź do formularza">Darmowa analiza</a>
+          <a href="/#formularz" aria-label="Przejdź do formularza">Darmowa ocena potencjalnych oszczędności</a>
         </Button>
       </div>
     </header>

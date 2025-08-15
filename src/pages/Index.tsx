@@ -26,13 +26,13 @@ const Index = () => {
           <div className="container py-20 md:py-28">
             <div className="mx-auto max-w-4xl text-center animate-enter text-primary-foreground">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
-                Obniż koszty energii dla swojej firmy, nawet do 25%
-              </h1>
-              <p className="mt-3 mb-6 text-lg md:text-xl text-primary-foreground/90">
-                Bez inwestycji. Bez straty czasu.
-              </p>
-              <Button asChild variant="hero" size="lg">
-                <a href="#formularz" aria-label="Przewiń do formularza">Darmowa analiza</a>
+                 Obniż koszty energii dla swojej firmy, nawet do 25%
+               </h1>
+               <p className="mt-3 mb-6 text-lg md:text-xl text-primary-foreground/90">
+                 Bez inwestycji. Bez straty czasu. Bez ryzyka.
+               </p>
+               <Button asChild variant="hero" size="lg">
+                 <a href="#formularz" aria-label="Przewiń do formularza">Darmowa ocena potencjalnych oszczędności</a>
               </Button>
             </div>
           </div>
@@ -134,7 +134,6 @@ const Index = () => {
       <CardContent className="pt-4">
         <div className="grid gap-6 md:grid-cols-2 items-start">
           <div>
-            <h3 className="text-xl font-semibold">Własna analiza</h3>
             <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground">
               <li>darmowa ocena</li>
               <li>oparta na dostarczonych informacjach</li>
@@ -143,7 +142,7 @@ const Index = () => {
             </ul>
             <div className="mt-6">
               <Button asChild variant="hero" size="lg">
-                <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa analiza</a>
+                <a href="https://tally.so/forms/mV6Jvl/edit">Darmowa ocena potencjalnych oszczędności</a>
               </Button>
             </div>
           </div>
@@ -205,7 +204,7 @@ const Index = () => {
               </AccordionItem>
               <AccordionItem value="item-11">
                 <AccordionTrigger>Jak wygląda serwisowanie?</AccordionTrigger>
-                <AccordionContent>Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową – wszystko w ramach naszej usługi EaaS. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu.</AccordionContent>
+                <AccordionContent>Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-12">
                 <AccordionTrigger>Czy modu.energy współpracuje z istniejącymi źródłami energii?</AccordionTrigger>
@@ -280,7 +279,7 @@ const Index = () => {
                     {
                       "@type": "Question",
                       name: "Jak wygląda serwisowanie?",
-                      acceptedAnswer: { "@type": "Answer", text: "Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową – wszystko w ramach naszej usługi EaaS. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu." },
+                      acceptedAnswer: { "@type": "Answer", text: "Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu." },
                     },
                     {
                       "@type": "Question",

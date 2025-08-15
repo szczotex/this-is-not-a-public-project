@@ -31,12 +31,6 @@ const ONas = () => {
                   Jesteśmy partnerem dla polskich przedsiębiorstw w transformacji energetycznej, dostarczając inteligentne systemy BESS, które optymalizują zużycie i maksymalizują oszczędności – bez nakładu finansowego czy czasowego. Budujemy długoterminowe relacje oparte na transparentności, innowacji i realnych wynikach.
                 </p>
               </div>
-
-              <div className="pt-4">
-                <p className="text-foreground font-medium">
-                  Skontaktuj się z nami, by dowiedzieć się, jak możemy wesprzeć Twoją firmę
-                </p>
-              </div>
             </div>
           </div>
         </section>
