@@ -39,7 +39,7 @@ const Index = () => {
         </section>
 
         {/* Features */}
-        <section className="relative py-8 md:py-14 bg-muted/40 page-texture border-t">
+        <section className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
           <div className="container">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
               Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
@@ -83,7 +83,7 @@ const Index = () => {
 
         {/* ICP */}
         {/* ICP */}
-        <section className="relative py-8 md:py-14 bg-background page-texture border-t">
+        <section className="relative py-12 md:py-20 bg-background page-texture border-t">
           <div className="container">
             <div className="mx-auto max-w-4xl">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">Jakich firm szukamy?</h2>
@@ -125,7 +125,7 @@ const Index = () => {
         </section>
 
         {/* Form CTA */}
-        <section id="formularz" className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
+        <section id="formularz" className="relative py-16 md:py-24 bg-muted/40 page-texture border-t">
           <div className="container">
     <Card>
       <CardHeader className="pb-2">
@@ -158,7 +158,7 @@ const Index = () => {
     </Card>
           </div>
         </section>
-        <section className="relative py-12 md:py-16 bg-background page-texture border-t">
+        <section className="relative py-16 md:py-24 bg-background page-texture border-t">
           <div className="container max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
             <Accordion type="single" collapsible className="w-full">

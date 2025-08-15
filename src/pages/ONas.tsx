@@ -6,7 +6,7 @@ const ONas = () => {
     <div className="min-h-screen bg-background text-foreground page-texture">
       <Header />
       <main>
-        <section className="relative py-10 md:py-16 bg-background page-texture border-t">
+        <section className="relative py-16 md:py-24 bg-background page-texture border-t">
           <div className="container max-w-4xl">
             <h1 className="text-3xl md:text-4xl font-semibold mb-8">O nas</h1>
             
