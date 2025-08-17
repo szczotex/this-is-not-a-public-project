@@ -38,3 +38,6 @@ jobs:
         destination_dir: /
         keep_files: false
         force_orphan: true
+
+    - name: Add 404 Redirect
+      run: cp public/404.html dist/
