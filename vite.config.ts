@@ -13,6 +13,20 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist",  // Output directory for production build
     emptyOutDir: true,  // Clears dist folder before build
     sourcemap: mode === "development",  // Sourcemaps only in dev
+    
+    // CRITICAL ADDITION - Fixes asset paths
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        // Add this if you have a 404 page:
+        // "404": path.resolve(__dirname, "public/404.html")
+      },
+      output: {
+        // Ensures consistent asset paths
+        assetFileNames: "assets/[name]-[hash][extname]",
+        entryFileNames: "assets/[name]-[hash].js"
+      }
+    }
   },
   
   server: {
