@@ -6,36 +6,35 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: 20
+        cache: 'npm'
         
-    - name: Install Dependencies
+    - name: Install dependencies
       run: npm ci
       
-    - name: Build Project
+    - name: Build project
       run: npm run build
       
-    # CRITICAL: Add SPA redirect file
-    - name: Add SPA Redirect
+    - name: Fix MIME types
       run: |
-        # Create _redirects file if it doesn't exist
-        if [ ! -f "public/_redirects" ]; then
-          mkdir -p public
-          echo "/*    /index.html   200" > public/_redirects
-        fi
-        # Copy to dist folder
-        cp public/_redirects dist/
+        # Add explicit .js extensions to all JS files
+        find dist -type f -exec sed -i 's|"type":"module"|"type":"application/javascript"|g' {} \;
         
-    - name: Deploy to GitHub Pages
+        # Add Content-Type headers
+        echo -e "/*.js\n  Content-Type: application/javascript\n" > dist/_headers
+        echo -e "/*.css\n  Content-Type: text/css\n" >> dist/_headers
+        
+    - name: Add SPA redirect
+      run: echo "/*    /index.html   200" > dist/_redirects
+      
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        destination_dir: .  # Deploy to root of gh-pages branch
-        keep_files: false   # Clear previous files
-        force_orphan: true  # Maintain clean history
+        destination_dir: /
+        keep_files: false
+        force_orphan: true
