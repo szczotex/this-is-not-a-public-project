@@ -21,3 +21,5 @@ jobs:
     # Use personal access token instead
         github_token: ${{ secrets.GITHUB_TOKEN }}  # Already exists
         publish_dir: ./dist
+        destination_dir: .  # Deploys to root of gh-pages
+        keep_files: false   # Clears old files
