@@ -23,8 +23,9 @@ export default defineConfig(({ mode }) => ({
       },
       output: {
         // Ensures consistent asset paths
-        assetFileNames: "assets/[name]-[hash][extname]",
-        entryFileNames: "assets/[name]-[hash].js"
+          assetFileNames: 'assets/[name]-[hash][extname]',
+          entryFileNames: 'assets/[name]-[hash].js',
+          chunkFileNames: 'assets/[name]-[hash].js',
       }
     }
   },
