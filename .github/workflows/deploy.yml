@@ -1,10 +1,11 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [main]
-    
+
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,17 +34,20 @@ jobs:
         echo "www.modu.energy" > dist/CNAME
         echo "/*    /index.html   200" > dist/_redirects
         
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: 'dist'
+    - name: Create deployment package
+      run: |
+        cd dist
+        touch .nojekyll
+        git init
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add -A
+        git commit -m "Deploy to GitHub Pages"
         
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v4
+    - name: Push to gh-pages
+      uses: ad-m/github-push-action@master
+      with:
+        branch: gh-pages
+        directory: dist
+        force: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
