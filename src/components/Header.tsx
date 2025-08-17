@@ -22,7 +22,7 @@ const Header = () => {
           </nav>
         </div>
         <Button asChild variant="hero" size="sm">
-          <a href="/#formularz" aria-label="Przejdź do formularza">Darmowa ocena potencjalnych oszczędności</a>
+          <a href="/#formularz" aria-label="Przejdź do formularza">Indywidualna oferta</a>
         </Button>
       </div>
     </header>
