@@ -41,3 +41,11 @@ jobs:
 
     - name: Add 404 Redirect
       run: cp public/404.html dist/
+
+    - name: Add Routing Files
+      run: |
+      cp public/404.html dist/
+      echo "/*    /index.html   200" > dist/_redirects
+
+    - name: Add CNAME
+      run: echo "www.modu.energy" > dist/CNAME
