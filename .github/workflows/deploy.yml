@@ -2,12 +2,21 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: 'npm'
@@ -18,18 +27,23 @@ jobs:
     - name: Build project
       run: npm run build
       
-    # Add required files
     - name: Add routing files
       run: |
         cp public/404.html dist/
         echo "www.modu.energy" > dist/CNAME
         echo "/*    /index.html   200" > dist/_redirects
         
-    # FIXED DEPLOY STEP - no destination_dir needed
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        keep_files: false
-        nojekyll: true  # Critical for SPA support
+        path: 'dist'
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
