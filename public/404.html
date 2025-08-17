@@ -6,10 +6,10 @@
   <script>
     // Redirect all routes to index.html
     const segments = window.location.pathname.split('/');
+    const path = encodeURIComponent(window.location.pathname);
     const query = window.location.search;
     const hash = window.location.hash;
-    const path = segments.slice(1).join('/');
-    window.location.href = `/?p=${encodeURIComponent(path)}${query}${hash}`;
+    window.location.href = `/?p=${path}${query}${hash}`;
   </script>
 </head>
 <body>
