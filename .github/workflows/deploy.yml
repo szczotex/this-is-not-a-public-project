@@ -4,22 +4,38 @@ on:
     branches: [main]
 jobs:
   build-deploy:
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: 20
-    - run: npm ci
-    - run: npm run build
-    - uses: peaceiris/actions-gh-pages@v3
+        
+    - name: Install Dependencies
+      run: npm ci
+      
+    - name: Build Project
+      run: npm run build
+      
+    # CRITICAL: Add SPA redirect file
+    - name: Add SPA Redirect
+      run: |
+        # Create _redirects file if it doesn't exist
+        if [ ! -f "public/_redirects" ]; then
+          mkdir -p public
+          echo "/*    /index.html   200" > public/_redirects
+        fi
+        # Copy to dist folder
+        cp public/_redirects dist/
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-    # Use personal access token instead
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # Already exists
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        destination_dir: .  # Deploys to root of gh-pages
-        keep_files: false   # Clears old files
+        destination_dir: .  # Deploy to root of gh-pages branch
+        keep_files: false   # Clear previous files
+        force_orphan: true  # Maintain clean history
