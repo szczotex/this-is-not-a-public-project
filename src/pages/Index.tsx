@@ -158,11 +158,10 @@ const Index = () => {
           </div>
         </section>
         
-        {/* FAQ */}
+        {/* FAQ Section */}
         <section className="relative py-16 md:py-24 bg-background page-texture border-t">
           <div className="container max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
-            <Accordion type="single" collapsible className="w-full">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
@@ -312,5 +311,3 @@ const Index = () => {
 };
 
 export default Index;
-
-              <AccordionItem value="item-14">
