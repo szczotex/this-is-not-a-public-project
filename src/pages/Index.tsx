@@ -116,7 +116,7 @@ const Index = () => {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
-                    Każdy przypadek jest odmienny - po analizie dokumentów dostarczonych formularzem, wrócimy z konkretną ofertą możliwych oszczędności
+                    Każdy przypadek jest odmienny - po analizie dostarczonych dokumentów wrócimy z konkretną ofertą możliwych oszczędności
                   </p>
                 </CardContent>
               </Card>
