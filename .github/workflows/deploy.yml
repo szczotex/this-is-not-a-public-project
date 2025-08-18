@@ -34,10 +34,15 @@ jobs:
           ls -R dist
           
           echo "Sprawdzam główne pliki:"
-          if [ -f "dist/index.html" ] && [ -f "dist/assets/main.js" ]; then
+          JS_FILE=$(ls dist/assets/index-*.js | head -1)
+          CSS_FILE=$(ls dist/assets/index-*.css | head -1)
+          
+          if [ -f "dist/index.html" ] && [ -f "$JS_FILE" ] && [ -f "$CSS_FILE" ]; then
             echo "✅ Budowa udana!"
+            echo "Plik JS: $JS_FILE"
+            echo "Plik CSS: $CSS_FILE"
           else
-            echo "❌ Brak plików budowy!"
+            echo "❌ Brak wymaganych plików budowy!"
             exit 1
           fi
 
