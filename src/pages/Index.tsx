@@ -137,7 +137,7 @@ const Index = () => {
                       <li>darmowa ocena</li>
                       <li>oparta na dostarczonych informacjach</li>
                       <li>zero zobowiązań</li>
-                      <li>szybka odpowiedź, do paru dni</li>
+                      <li>szybka odpowiedź</li>
                     </ul>
                     <div className="mt-6">
                       <Button asChild variant="hero" size="lg">
