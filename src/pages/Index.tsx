@@ -32,7 +32,7 @@ const Index = () => {
                  Bez inwestycji. Bez straty czasu. Bez ryzyka.
                </p>
                <Button asChild variant="hero" size="lg">
-                 <a href="#formularz" aria-label="Przewiń do formularza">Indywidualna oferta</a>
+                 <a href="#formularz" aria-label="Przewiń do formularza">Sprawdź potencjalne zyski</a>
               </Button>
             </div>
           </div>
@@ -141,7 +141,7 @@ const Index = () => {
                     </ul>
                     <div className="mt-6">
                       <Button asChild variant="hero" size="lg">
-                        <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Indywidualna oferta</a>
+                        <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Sprawdź potencjalne zyski</a>
                       </Button>
                     </div>
                   </div>
