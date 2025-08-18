@@ -76,7 +76,52 @@
 
   <!-- UPROSZCZONE I POPRAWIONE ŁADOWANIE SKRYPTU -->
   <script>
-    (function() {
+(function() {
+    // Try to load any JS file we can find
+    const possibleScripts = [
+      './assets/main.js',
+      './Assets/main.js',
+      '/lovable-uploads/*.js',
+      'https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js',
+      'https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js'
+    ];
+    
+    function tryLoadScript(index = 0) {
+      if (index >= possibleScripts.length) {
+        showError('Aplikacja nie może zostać załadowana. Prosimy spróbować później.');
+        return;
+      }
+      
+      const src = possibleScripts[index];
+      loadScript(src)
+        .then(() => {
+          if (index > 1) {
+            console.warn(`Loaded fallback script: ${src}`);
+            initFallbackApp();
+          }
+        })
+        .catch(error => {
+          console.error(`Błąd ładowania ${src}:`, error);
+          tryLoadScript(index + 1);
+        });
+    }
+    
+    function initFallbackApp() {
+      // Minimal React fallback
+      const rootElement = document.getElementById('root');
+      rootElement.innerHTML = `
+        <div style="padding: 2rem; text-align: center;">
+          <h1>modu.energy</h1>
+          <p>Strona jest w trakcie aktualizacji. Prosimy spróbować za kilka minut.</p>
+          <p>Kontakt: support@modu.energy</p>
+        </div>
+      `;
+    }
+    
+    tryLoadScript();    
+
+
+(function() {
       // ZAWSZE UŻYWAJ WZGLĘDNEJ ŚCIEŻKI
       const scriptPath = './assets/main.js';
       
