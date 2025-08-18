@@ -77,48 +77,55 @@
   <!-- UPROSZCZONE I POPRAWIONE ŁADOWANIE SKRYPTU -->
   <script>
 (function() {
-    // Always use this path
-    const scriptPath = './assets/main.js';
-    
-    function loadScript(src) {
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.type = 'text/javascript'; // Changed to text/javascript
-        script.crossOrigin = 'anonymous';
-        script.onload = resolve;
-        script.onerror = () => reject(new Error(`Script load error: ${src}`));
-        document.head.appendChild(script);
-      });
-    }
-    
-    function showError(message) {
-      document.getElementById('root').innerHTML = `
-        <div style="padding: 2rem; text-align: center; color: red;">
-          <h2>Application Error</h2>
-          <p>${message}</p>
-          <p>Please contact support@modu.energy</p>
+  // Use absolute path to bypass relative path issues
+  const scriptPath = '/assets/main.js?' + Date.now();
+  
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.type = 'text/javascript';
+      script.crossOrigin = 'anonymous';
+      script.onload = resolve;
+      script.onerror = () => {
+        console.error('Failed to load script:', src);
+        reject(new Error(`Script load error: ${src}`));
+      };
+      document.head.appendChild(script);
+    });
+  }
+
+  function showFallback() {
+    const root = document.getElementById('root');
+    if (root) {
+      root.innerHTML = `
+        <div style="padding: 2rem; text-align: center;">
+          <h1>modu.energy</h1>
+          <h2>Obniżamy koszty energii dla Twojej firmy</h2>
+          <p>Strona jest w trakcie aktualizacji. Prosimy spróbować za kilka minut.</p>
+          <p>Kontakt: support@modu.energy</p>
         </div>
       `;
     }
-    
-    // Try to load the script
-    loadScript(scriptPath)
-      .catch(error => {
-        console.error('Loading failed:', error);
-        showError('Failed to load application. Please refresh.');
-        
-        // Create minimal content as fallback
-        document.getElementById('root').innerHTML = `
-          <div style="padding: 2rem; text-align: center;">
-            <h1>modu.energy</h1>
-            <h2>Obniżamy koszty energii dla Twojej firmy</h2>
-            <p>Strona jest w trakcie aktualizacji. Prosimy spróbować za kilka minut.</p>
-            <p>Kontakt: support@modu.energy</p>
-          </div>
-        `;
-      });
-  })();
+  }
+
+  // Try to load the script with timeout
+  const loadPromise = loadScript(scriptPath);
+  
+  // Set timeout to show fallback if loading takes too long
+  const timeout = setTimeout(() => {
+    console.error('Script loading timed out');
+    showFallback();
+  }, 3000);
+
+  loadPromise
+    .then(() => clearTimeout(timeout))
+    .catch(error => {
+      console.error('Script loading failed:', error);
+      clearTimeout(timeout);
+      showFallback();
+    });
+})();
   </script>
 </body>
 </html>
