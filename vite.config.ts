@@ -2,40 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/", // KLUCZOWA ZMIANA: względna ścieżka dla GitHub Pages
+  base: "/",
   build: {
     outDir: "dist",
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: mode === "development",
-    rollupOptions: {
-      output: {
-        // UPROSZCZONE I POPRAWIONE NAZWY PLIKÓW
-        assetFileNames: "assets/[name]-[hash][extname]",
-        chunkFileNames: "assets/[name]-[hash].js",
-      }
-    }
+    // COMPLETELY REMOVE rollupOptions TEMPORARILY
   },
-  plugins: [
-    react(),
-    // USUNIĘTO componentTagger - powodował problemy w produkcji
-    
-    // DODANO PLUGIN DO AUTOMATYCZNEJ POPRAWY ŚCIEŻEK
-    {
-      name: 'asset-path-corrector',
-      transformIndexHtml(html) {
-        return html
-          .replace(/(src|href)="\/assets\//g, '$1="./assets/')
-          .replace(/src="\//g, 'src="./');
-      }
-    }
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // USUNIĘTO esbuild - niepotrzebne z drop (może powodować konflikty)
 }));
