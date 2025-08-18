@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
         // UPROSZCZONE I POPRAWIONE NAZWY PLIKÓW
         assetFileNames: "assets/[name]-[hash][extname]",
         chunkFileNames: "assets/[name]-[hash].js",
-        entryFileNames: "assets/main.js", // STAŁA NAZWA BEZ HASHA
+        entryFileNames: "assets/main.tsx", // STAŁA NAZWA BEZ HASHA
       }
     }
   },
