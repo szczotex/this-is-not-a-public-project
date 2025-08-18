@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./", // KLUCZOWA ZMIANA: względna ścieżka dla GitHub Pages
+  base: "/", // KLUCZOWA ZMIANA: względna ścieżka dla GitHub Pages
   build: {
     outDir: "dist",
     emptyOutDir: true,
@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
         // UPROSZCZONE I POPRAWIONE NAZWY PLIKÓW
         assetFileNames: "assets/[name]-[hash][extname]",
         chunkFileNames: "assets/[name]-[hash].js",
-        entryFileNames: "assets/main.tsx", // STAŁA NAZWA BEZ HASHA
+        entryFileNames: "assets/main.js", // STAŁA NAZWA BEZ HASHA
       }
     }
   },
