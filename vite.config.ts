@@ -1,44 +1,41 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
-import mime from 'mime';
 
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "./", // KLUCZOWA ZMIANA: względna ścieżka dla GitHub Pages
   build: {
     outDir: "dist",
     emptyOutDir: true,
     sourcemap: mode === "development",
     rollupOptions: {
       output: {
-        // CRITICAL FIX: Ensure proper file extensions
-        assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.').at(1);
-          if (extType === 'css') return 'assets/[name]-[hash][extname]';
-          return 'assets/[name]-[hash][extname]';
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/main.js'
+        // UPROSZCZONE I POPRAWIONE NAZWY PLIKÓW
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/main.js", // STAŁA NAZWA BEZ HASHA
       }
     }
   },
   plugins: [
     react(),
-    mode === "development" && componentTagger(),
-    // Add MIME type plugin
+    // USUNIĘTO componentTagger - powodował problemy w produkcji
+    
+    // DODANO PLUGIN DO AUTOMATYCZNEJ POPRAWY ŚCIEŻEK
     {
-      name: 'mime-fix',
-      configureServer(server) {
-        server.middlewares.use((req, res, next) => {
-          if (req.url.includes('.js')) {
-            res.setHeader('Content-Type', 'application/javascript');
-          }
-          next();
-        });
+      name: 'asset-path-corrector',
+      transformIndexHtml(html) {
+        return html
+          .replace(/(src|href)="\/assets\//g, '$1="./assets/')
+          .replace(/src="\//g, 'src="./');
       }
     }
-  ].filter(Boolean),
-  resolve: { alias: { "@": path.resolve(__dirname, "./src") } },
-  esbuild: { drop: mode === "production" ? ["console", "debugger"] : [] },
+  ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  // USUNIĘTO esbuild - niepotrzebne z drop (może powodować konflikty)
 }));
