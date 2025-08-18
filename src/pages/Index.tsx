@@ -82,14 +82,13 @@ const Index = () => {
         </section>
 
         {/* ICP */}
-        {/* ICP */}
         <section className="relative py-12 md:py-20 bg-background page-texture border-t">
           <div className="container">
             <div className="mx-auto max-w-4xl">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">Jakich firm szukamy?</h2>
               <Card>
                 <CardContent className="pt-6">
-                  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 justify-items-start">
                     <div className="flex items-center gap-3 text-sm">
                       <Sun aria-hidden className="text-foreground" />
                       <span>istniejąca fotowoltaika</span>
@@ -100,7 +99,7 @@ const Index = () => {
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Gauge aria-hidden className="text-foreground" />
-                      <span>wysoki pobór mocy (&gt;100MWh rocznie)</span>
+                      <span className="text-left">wysoki pobór mocy (&gt;100MWh rocznie)</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Plug aria-hidden className="text-foreground" />
@@ -116,7 +115,7 @@ const Index = () => {
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
-                    Każdy przypadek jest odmienny - po analizie dostarczonych dokumentów wrócimy z konkretną ofertą możliwych oszczędności
+                    Każdy przypadek jest odmienny - po analizie dokumentów wrócimy z konkretną ofertą możliwych oszczędności
                   </p>
                 </CardContent>
               </Card>
@@ -127,40 +126,43 @@ const Index = () => {
         {/* Form CTA */}
         <section id="formularz" className="relative py-16 md:py-24 bg-muted/40 page-texture border-t">
           <div className="container">
-    <Card>
-      <CardHeader className="pb-2">
-        <CardTitle className="text-2xl md:text-3xl">Sprawdź ile możesz oszczędzić</CardTitle>
-      </CardHeader>
-      <CardContent className="pt-4">
-        <div className="grid gap-6 md:grid-cols-2 items-start">
-          <div>
-            <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground">
-              <li>darmowa ocena</li>
-              <li>oparta na dostarczonych informacjach</li>
-              <li>zero zobowiązań</li>
-              <li>szybka odpowiedź, do paru dni</li>
-            </ul>
-            <div className="mt-6">
-              <Button asChild variant="hero" size="lg">
-                <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Indywidualna oferta</a>
-              </Button>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">Masz pytania?</h3>
-            <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
-              <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
-              <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-2xl md:text-3xl">Sprawdź ile możesz oszczędzić</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="grid gap-6 md:grid-cols-2 items-start">
+                  <div>
+                    <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
+                      <li>darmowa ocena</li>
+                      <li>oparta na dostarczonych informacjach</li>
+                      <li>zero zobowiązań</li>
+                      <li>szybka odpowiedź, do paru dni</li>
+                    </ul>
+                    <div className="mt-6">
+                      <Button asChild variant="hero" size="lg">
+                        <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Indywidualna oferta</a>
+                      </Button>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">Masz pytania?</h3>
+                    <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
+                      <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+                      <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
+        
+        {/* FAQ */}
         <section className="relative py-16 md:py-24 bg-background page-texture border-t">
           <div className="container max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
+            <Accordion type="single" collapsible className="w-full">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
@@ -310,3 +312,5 @@ const Index = () => {
 };
 
 export default Index;
+
+              <AccordionItem value="item-14">
