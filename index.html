@@ -78,8 +78,8 @@
   <!-- UPROSZCZONE I POPRAWIONE ŁADOWANIE SKRYPTU -->
   <script>
 (function() {
-  // Use absolute path to bypass relative path issues
-  const scriptPath = '//www.modu.energy/assets/main.js'
+  // Use absolute HTTPS URL with cache-busting
+  const scriptPath = 'https://www.modu.energy/assets/main.js?v=' + Date.now();
   
   function loadScript(src) {
     return new Promise((resolve, reject) => {
@@ -89,42 +89,42 @@
       script.crossOrigin = 'anonymous';
       script.onload = resolve;
       script.onerror = () => {
-        console.error('Failed to load script:', src);
+        console.error('Failed to load:', src);
         reject(new Error(`Script load error: ${src}`));
       };
       document.head.appendChild(script);
     });
   }
 
-  function showFallback() {
+  // Immediate fallback content
+  const showFallback = () => {
     const root = document.getElementById('root');
-    if (root) {
-      root.innerHTML = `
-        <div style="padding: 2rem; text-align: center;">
-          <h1>modu.energy</h1>
-          <h2>Obniżamy koszty energii dla Twojej firmy</h2>
-          <p>Strona jest w trakcie aktualizacji. Prosimy spróbować za kilka minut.</p>
-          <p>Kontakt: support@modu.energy</p>
-        </div>
-      `;
-    }
-  }
+    if(root) root.innerHTML = `
+      <div style="padding: 2rem; text-align: center;">
+        <h1>modu.energy</h1>
+        <p>Obniżamy koszty energii dla Twojej firmy</p>
+        <p>Aplikacja załadowana pomyślnie</p>
+      </div>
+    `;
+  };
 
-  // Try to load the script with timeout
-  const loadPromise = loadScript(scriptPath);
-  
-  // Set timeout to show fallback if loading takes too long
-  const timeout = setTimeout(() => {
-    console.error('Script loading timed out');
-    showFallback();
-  }, 3000);
-
-  loadPromise
-    .then(() => clearTimeout(timeout))
+  // First try: HTTPS with cache busting
+  loadScript(scriptPath)
+    .then(showFallback)
     .catch(error => {
-      console.error('Script loading failed:', error);
-      clearTimeout(timeout);
-      showFallback();
+      console.error('Primary load failed:', error);
+      // Fallback to relative path
+      loadScript('./assets/main.js')
+        .then(showFallback)
+        .catch(e => {
+          console.error('Fallback load failed:', e);
+          document.getElementById('root').innerHTML = `
+            <div style="color:red;padding:2rem">
+              <h2>Błąd techniczny</h2>
+              <p>Prosimy o kontakt: support@modu.energy</p>
+            </div>
+          `;
+        });
     });
 })();
   </script>
