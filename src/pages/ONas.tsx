@@ -8,7 +8,7 @@ const ONas = () => {
       <main>
         <section className="relative py-16 md:py-24 bg-background border-t">
           <div className="container max-w-4xl">
-            <h1 className="text-3xl md:text-4xl font-semibold mb-8">O nas</h1>
+            {/* USUNIĘTY NAGŁÓWEK "O NAS" */}
             
             <div className="space-y-10">
               {/* Sekcja 1: Nasza misja */}
