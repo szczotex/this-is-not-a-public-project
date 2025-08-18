@@ -6,49 +6,50 @@ const ONas = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
+        {/* Usunięto klasę max-w-4xl i dodano prawidłowy kontener */}
         <section className="relative py-16 md:py-24 bg-background border-t">
-          <div className="container max-w-4xl">
-            {/* USUNIĘTY NAGŁÓWEK "O NAS" */}
-            
-            <div className="space-y-10">
-              {/* Sekcja 1: Nasza misja */}
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">Nasza Misja</h2>
-                <p className="text-muted-foreground leading-relaxed text-base">
-                  Jesteśmy partnerem dla polskich przedsiębiorstw w transformacji energetycznej, 
-                  dostarczając inteligentne systemy BESS, które optymalizują zużycie i maksymalizują 
-                  oszczędności – bez nakładu finansowego czy czasowego. Budujemy długoterminowe relacje 
-                  oparte na transparentności, innowacji i realnych wynikach.
-                </p>
-              </div>
-
-              {/* Sekcja 2: Dwie kolumny */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                {/* Kolumna 1: Kim jesteśmy? */}
+          <div className="container">
+            <div className="max-w-4xl mx-auto"> {/* Dodano ten div do kontroli szerokości */}
+              <div className="space-y-10">
+                {/* Sekcja 1: Nasza misja */}
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4">Kim Jesteśmy?</h2>
+                  <h2 className="text-2xl font-semibold mb-4">Nasza Misja</h2>
                   <p className="text-muted-foreground leading-relaxed text-base">
-                    Jako modu.energy działamy w obszarze optymalizacji energetycznej dla firm B2B, 
-                    specjalizując się w instalacjach i obsłudze przemysłowych i komercyjnych systemów 
-                    magazynowania energii. Działamy w ramach spółki RenewPacks sp. z o.o. z siedzibą 
-                    w województwie podkarpackim.
+                    Jesteśmy partnerem dla polskich przedsiębiorstw w transformacji energetycznej, 
+                    dostarczając inteligentne systemy BESS, które optymalizują zużycie i maksymalizują 
+                    oszczędności – bez nakładu finansowego czy czasowego. Budujemy długoterminowe relacje 
+                    oparte na transparentności, innowacji i realnych wynikach.
                   </p>
                 </div>
 
-                {/* Kolumna 2: Nasza historia i doświadczenie */}
-                <div>
-                  <h2 className="text-2xl font-semibold mb-4">Nasza Historia i Doświadczenie</h2>
-                  <p className="text-muted-foreground leading-relaxed text-base">
-                    Jesteśmy nowi na polskim rynku, co pozwala nam wprowadzać świeże, nowoczesne 
-                    podejścia do zarządzania energią – bez balastu przestarzałych modeli. Nasza siła 
-                    tkwi w transferze wiedzy z rynku brytyjskiego, gdzie zdobywaliśmy doświadczenie 
-                    na rynku energetycznym. To praktyczne know-how, w tym zaawansowane zastosowania AI 
-                    w zarządzaniu energią, adaptujemy do lokalnych warunków - oferując klientom 
-                    sprawdzone, efektywne rozwiązania.
-                  </p>
+                {/* Sekcja 2: Dwie kolumny */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                  {/* Kolumna 1: Kim jesteśmy? */}
+                  <div>
+                    <h2 className="text-2xl font-semibold mb-4">Kim Jesteśmy?</h2>
+                    <p className="text-muted-foreground leading-relaxed text-base">
+                      Jako modu.energy działamy w obszarze optymalizacji energetycznej dla firm B2B, 
+                      specjalizując się w instalacjach i obsłudze przemysłowych i komercyjnych systemów 
+                      magazynowania energii. Działamy w ramach spółki RenewPacks sp. z o.o. z siedzibą 
+                      w województwie podkarpackim.
+                    </p>
+                  </div>
+
+                  {/* Kolumna 2: Nasza historia i doświadczenie */}
+                  <div>
+                    <h2 className="text-2xl font-semibold mb-4">Nasza Historia i Doświadczenie</h2>
+                    <p className="text-muted-foreground leading-relaxed text-base">
+                      Jesteśmy nowi na polskim rynku, co pozwala nam wprowadzać świeże, nowoczesne 
+                      podejścia do zarządzania energią – bez balastu przestarzałych modeli. Nasza siła 
+                      tkwi w transferze wiedzy z rynku brytyjskiego, gdzie zdobywaliśmy doświadczenie 
+                      na rynku energetycznym. To praktyczne know-how, w tym zaawansowane zastosowania AI 
+                      w zarządzaniu energią, adaptujemy do lokalnych warunków - oferując klientom 
+                      sprawdzone, efektywne rozwiązania.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </div> {/* Koniec diva z mx-auto */}
           </div>
         </section>
       </main>
