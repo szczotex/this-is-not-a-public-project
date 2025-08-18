@@ -10,44 +10,64 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - name: Checkout repository
+        uses: actions/checkout@v4
         
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Build project
-      run: npm run build
-      
-    - name: Verify build output
-      run: |
-        echo "Dist contents:"
-        ls -R dist
-        echo "Checking for main.js:"
-        if [ -f "dist/assets/main.js" ]; then
-          echo "✅ main.js exists!"
-        else
-          echo "❌ main.js missing! Build failed?"
-          exit 1
-        fi
-      
-    - name: Add routing files
-      run: |
-        cp public/404.html dist/
-        echo "www.modu.energy" > dist/CNAME
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
         
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        cname: www.modu.energy
+      - name: Build project
+        run: |
+          npm run build 2>&1 | tee build.log
+          echo "Build logs:"
+          cat build.log
+          
+      - name: Debug build output
+        run: |
+          echo "Checking for any JS files:"
+          find dist -name "*.js" || echo "No JS files found"
+          echo "Full dist structure:"
+          ls -R dist
+          
+      - name: Verify build output
+        run: |
+          echo "Dist contents:"
+          ls -R dist
+          echo "Checking for main.js:"
+          if [ -f "dist/assets/main.js" ] || [ -f "dist/Assets/main.js" ]; then
+            echo "✅ main.js exists!"
+          else
+            echo "❌ main.js missing! Build failed?"
+            echo "All files in dist:"
+            find dist -type f
+            exit 1
+          fi
+        
+      - name: Add routing files
+        run: |
+          cp public/404.html dist/ || echo "No 404.html found"
+          echo "www.modu.energy" > dist/CNAME
+          touch dist/.nojekyll
+        
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-folder
+          path: dist/
+          retention-days: 1
+          
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: www.modu.energy
