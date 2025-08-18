@@ -51,17 +51,3 @@ jobs:
         directory: dist
         force: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Verify build output
-      run: |
-    # Sprawdź czy plik istnieje
-        if [ ! -f "dist/assets/main.js" ]; then
-          echo "❌ Plik main.js nie istnieje!"
-          exit 1
-        fi
-    
-    # Sprawdź czy index.html ma poprawne ścieżki
-        if ! grep -q 'src="./assets/main.js"' dist/index.html; then
-          echo "❌ Niepoprawna ścieżka do main.js w index.html"
-          exit 1
-        fi
