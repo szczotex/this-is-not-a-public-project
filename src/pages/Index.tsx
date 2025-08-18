@@ -99,7 +99,8 @@ const Index = () => {
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Gauge aria-hidden className="text-foreground" />
-                      <span className="text-left">wysoki pobór mocy (&gt;100MWh rocznie)</span>
+                      <span className="text-left">wysoki pobór mocy 
+(&gt;100MWh rocznie)</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Plug aria-hidden className="text-foreground" />
