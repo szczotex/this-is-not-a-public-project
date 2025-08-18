@@ -4,39 +4,49 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build project
+        run: npm run build
+
+      - name: Verify build
         run: |
-          # Create minimal dist structure
-          mkdir -p dist/assets
+          echo "Struktura dist:"
+          ls -R dist
           
-          # Create a simple React app file
-          echo "import React from 'react';" > dist/assets/main.js
-          echo "import ReactDOM from 'react-dom/client';" >> dist/assets/main.js
-          echo "ReactDOM.createRoot(document.getElementById('react-root')).render(" >> dist/assets/main.js
-          echo "  React.createElement('div', null," >> dist/assets/main.js
-          echo "    React.createElement('h1', null, 'modu.energy')," >> dist/assets/main.js
-          echo "    React.createElement('p', null, 'Oszczędzamy energię dla Twojej firmy')" >> dist/assets/main.js
-          echo "  )" >> dist/assets/main.js
-          echo ");" >> dist/assets/main.js
-          
-          cp index.html dist/
-        
+          echo "Sprawdzam główne pliki:"
+          if [ -f "dist/index.html" ] && [ -f "dist/assets/main.js" ]; then
+            echo "✅ Budowa udana!"
+          else
+            echo "❌ Brak plików budowy!"
+            exit 1
+          fi
+
+      - name: Add routing files
+        run: |
+          cp public/404.html dist/ || echo "Brak 404.html"
+          echo "www.modu.energy" > dist/CNAME
+          touch dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
