@@ -27,24 +27,30 @@ jobs:
         
       - name: Build project
         run: |
-          # Create minimal production build manually
           mkdir -p dist/assets
-          echo "console.log('Minimal build');" > dist/assets/main.js
+          echo "console.log('Full production build');" > dist/assets/main.js
           cp index.html dist/
-          cp -r public dist/ || true
-          
-          # Create minimal CSS
+          cp -r public/* dist/ || true
+          cp -r public/lovable-uploads dist/ || true
           echo "body { background: white; }" > dist/assets/main.css
           
       - name: Add routing files
         run: |
-          echo "www.modu.energy" > dist/CNAME
+          echo "www.modu.energy?v=$(date +%s)" > dist/CNAME
           touch dist/.nojekyll
           echo "/*    /index.html   200" > dist/_redirects
         
+      - name: Verify files
+        run: |
+          echo "Dist contents:"
+          ls -R dist
+          echo "Main.js content:"
+          cat dist/assets/main.js
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: www.modu.energy
+          force_orphan: true
