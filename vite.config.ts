@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => ({
   base: "/", // KLUCZOWA ZMIANA: względna ścieżka dla GitHub Pages
   build: {
     outDir: "dist",
+    assetsDir: "assets"
     emptyOutDir: true,
     sourcemap: mode === "development",
     rollupOptions: {
