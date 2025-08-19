@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <header className="border-b bg-white">
-      <div className="container flex items-center justify-between py-4">
+      <div className="w-full px-4 max-w-7xl mx-auto flex items-center justify-between py-4">
         <div className="flex items-center gap-6">
           <a href="/" className="flex items-center" aria-label="Strona główna modu.energy">
             <img
