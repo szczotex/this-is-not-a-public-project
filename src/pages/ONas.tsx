@@ -49,7 +49,7 @@ const ONas = () => {
                   </div>
                 </div>
               </div>
-            </div> {/* Koniec diva z mx-auto */}
+          
           </div>
         </section>
       </main>
