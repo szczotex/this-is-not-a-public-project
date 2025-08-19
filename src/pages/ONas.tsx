@@ -8,8 +8,8 @@ const ONas = () => {
       <main>
         {/* Usunięto klasę max-w-4xl i dodano prawidłowy kontener */}
         <section className="relative py-16 md:py-24 bg-background border-t">
-          <div className="container">
-            <div className="max-w-4xl mx-auto"> {/* Dodano ten div do kontroli szerokości */}
+          <div className="w-full px-4 max-w-4xl mx-auto">
+ {/* Dodano ten div do kontroli szerokości */}
               <div className="space-y-10">
                 {/* Sekcja 1: Nasza misja */}
                 <div>
