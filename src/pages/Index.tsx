@@ -23,7 +23,7 @@ const Index = () => {
             />
             <div className="absolute inset-0 bg-foreground/60" />
           </div>
-          <div className="container py-20 md:py-28">
+          <div className="w-full px-4 py-20 md:py-28">
             <div className="mx-auto max-w-4xl text-center animate-enter text-primary-foreground">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                  Obniż koszty energii dla swojej firmy, nawet do 25%
@@ -40,7 +40,7 @@ const Index = () => {
 
         {/* Features */}
         <section className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
-          <div className="container">
+          <div className="w-full px-4">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
               Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
             </h2>
@@ -161,7 +161,7 @@ const Index = () => {
         
         {/* FAQ Section */}
         <section className="relative py-16 md:py-24 bg-background page-texture border-t">
-          <div className="container max-w-3xl">
+          <div className="w-full px-4 max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
