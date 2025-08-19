@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			// DODANO: Rozszerzenie o max-w-7xl
+			maxWidth: {
+				'7xl': '80rem', // 1280px
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
