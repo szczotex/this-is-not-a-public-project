@@ -3,13 +3,12 @@ import Footer from "@/components/Footer";
 
 const ONas = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <main className="w-full">
-        {/* Sekcja z pełną szerokością */}
+      <main className="flex-grow w-full">
         <section className="relative py-16 md:py-24 bg-background border-t w-full">
-          <div className="w-full px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
-            <div className="mx-auto w-full max-w-7xl"> {/* Zwiększono do max-w-7xl */}
+          <div className="w-full px-4 md:px-8 mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="space-y-10">
                 {/* Sekcja 1: Nasza misja */}
                 <div>
