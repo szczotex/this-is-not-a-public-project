@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug } from "lucide-react";
 import Header from "@/components/Header";
@@ -7,12 +7,12 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground page-texture">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <main>
-        {/* Hero - USUNIĘTO KONTENER */}
-        <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+      <main className="w-full overflow-x-hidden"> {/* Dodano overflow-x-hidden */}
+        {/* Hero - pełna szerokość */}
+        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
               src="/background.jpg"
@@ -23,9 +23,8 @@ const Index = () => {
             />
             <div className="absolute inset-0 bg-foreground/60" />
           </div>
-          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI */}
           <div className="w-full px-4 py-20 md:py-28">
-            <div className="mx-auto max-w-4xl text-center animate-enter text-primary-foreground">
+            <div className="max-w-4xl mx-auto text-center animate-enter text-primary-foreground">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                  Obniż koszty energii dla swojej firmy, nawet do 25%
                </h1>
@@ -39,14 +38,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Features - USUNIĘTO KONTENER */}
-        <section className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
-          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI */}
+        {/* Features - pełna szerokość */}
+        <section className="relative py-12 md:py-20 bg-muted/40 border-t">
           <div className="w-full px-4">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
               Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
             </h2>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
               <Card className="transition-transform duration-200 hover:scale-[1.02]">
                 <CardHeader>
                   <div className="flex items-center gap-3">
@@ -83,32 +81,32 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ICP - ZMIENIONO NA 4 ELEMENTY 2x2 */}
-        <section className="relative py-12 md:py-20 bg-background page-texture border-t">
-          <div className="container">
-            <div className="mx-auto max-w-4xl">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Jakich firm szukamy?</h2>
+        {/* ICP - poprawione wyrównanie */}
+        <section className="relative py-12 md:py-20 bg-background border-t">
+          <div className="w-full px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">Jakich firm szukamy?</h2>
               <Card>
                 <CardContent className="pt-6">
-                  <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-items-start">
-                    <div className="flex items-center gap-3 text-sm">
-                      <Sun aria-hidden className="text-foreground" />
+                  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 place-items-center"> {/* Zmieniono na place-items-center */}
+                    <div className="flex items-center gap-3 text-sm w-full justify-center sm:justify-start"> {/* Dodano wyrównanie */}
+                      <Sun aria-hidden className="text-foreground flex-shrink-0" />
                       <span>istniejąca fotowoltaika</span>
                     </div>
-                    <div className="flex items-center gap-3 text-sm">
-                      <Factory aria-hidden className="text-foreground" />
+                    <div className="flex items-center gap-3 text-sm w-full justify-center sm:justify-start">
+                      <Factory aria-hidden className="text-foreground flex-shrink-0" />
                       <span>obiekt przemysłowy / komercyjny</span>
                     </div>
-                    <div className="flex items-center gap-3 text-sm">
-                      <Gauge aria-hidden className="text-foreground" />
-                      <span className="text-left">wysokie zużycie energii<br/>(&gt;100MWh rocznie)</span>
+                    <div className="flex items-center gap-3 text-sm w-full justify-center sm:justify-start">
+                      <Gauge aria-hidden className="text-foreground flex-shrink-0" />
+                      <span className="text-center sm:text-left">wysokie zużycie energii<br/>(&gt;100MWh rocznie)</span>
                     </div>
-                    <div className="flex items-center gap-3 text-sm">
-                      <Plug aria-hidden className="text-foreground" />
+                    <div className="flex items-center gap-3 text-sm w-full justify-center sm:justify-start">
+                      <Plug aria-hidden className="text-foreground flex-shrink-0" />
                       <span>duża moc przyłącza</span>
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-4">
+                  <p className="text-sm text-muted-foreground mt-6 text-center">
                     Każdy przypadek jest odmienny - po analizie dokumentów wrócimy z konkretną ofertą możliwych oszczędności
                   </p>
                 </CardContent>
@@ -117,47 +115,48 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Form CTA */}
-        <section id="formularz" className="relative py-16 md:py-24 bg-muted/40 page-texture border-t">
-          <div className="container">
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-2xl md:text-3xl">Sprawdź ile możesz oszczędzić</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <div className="grid gap-6 md:grid-cols-2 items-start">
-                  <div>
-                    <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
-                      <li>darmowa ocena</li>
-                      <li>oparta na dostarczonych informacjach</li>
-                      <li>zero zobowiązań</li>
-                      <li>szybka odpowiedź</li>
-                    </ul>
-                    <div className="mt-6">
-                      <Button asChild variant="hero" size="lg">
-                        <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Sprawdź potencjalne zyski</a>
-                      </Button>
+        {/* Form CTA - pełna szerokość */}
+        <section id="formularz" className="relative py-16 md:py-24 bg-muted/40 border-t">
+          <div className="w-full px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-2xl md:text-3xl text-center">Sprawdź ile możesz oszczędzić</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4">
+                  <div className="grid gap-6 md:grid-cols-2 items-start">
+                    <div>
+                      <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
+                        <li>darmowa ocena</li>
+                        <li>oparta na dostarczonych informacjach</li>
+                        <li>zero zobowiązań</li>
+                        <li>szybka odpowiedź</li>
+                      </ul>
+                      <div className="mt-6">
+                        <Button asChild variant="hero" size="lg">
+                          <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Sprawdź potencjalne zyski</a>
+                        </Button>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">Masz pytania?</h3>
+                      <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
+                        <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+                        <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">Masz pytania?</h3>
-                    <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
-                      <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
-                      <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
         
-        {/* FAQ Section */}
-         <section className="relative py-16 md:py-24 bg-background page-texture border-t">
-          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI I WYŚRODKOWANIEM */}
-          <div className="w-full px-4 max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
-            <Accordion type="single" collapsible className="w-full">
+        {/* FAQ Section - pełna szerokość */}
+        <section className="relative py-16 md:py-24 bg-background border-t">
+          <div className="w-full px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">FAQ</h2>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
                 <AccordionContent>modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
