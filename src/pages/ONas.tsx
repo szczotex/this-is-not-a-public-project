@@ -5,16 +5,16 @@ const ONas = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main>
-        {/* Usunięto klasę max-w-4xl i dodano prawidłowy kontener */}
-        <section className="relative py-16 md:py-24 bg-background border-t">
-          <div className="w-full px-4 max-w-4xl mx-auto">
- {/* Dodano ten div do kontroli szerokości */}
+      <main className="w-full">
+        {/* Sekcja z pełną szerokością */}
+        <section className="relative py-16 md:py-24 bg-background border-t w-full">
+          <div className="w-full px-4 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
+            <div className="mx-auto w-full max-w-7xl"> {/* Zwiększono do max-w-7xl */}
               <div className="space-y-10">
                 {/* Sekcja 1: Nasza misja */}
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4">Nasza Misja</h2>
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center md:text-left">Nasza Misja</h2>
+                  <p className="text-muted-foreground leading-relaxed text-lg md:text-xl max-w-3xl mx-auto md:mx-0">
                     Jesteśmy partnerem dla polskich przedsiębiorstw w transformacji energetycznej, 
                     dostarczając inteligentne systemy BESS, które optymalizują zużycie i maksymalizują 
                     oszczędności – bez nakładu finansowego czy czasowego. Budujemy długoterminowe relacje 
@@ -23,11 +23,11 @@ const ONas = () => {
                 </div>
 
                 {/* Sekcja 2: Dwie kolumny */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-12">
                   {/* Kolumna 1: Kim jesteśmy? */}
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-4">Kim Jesteśmy?</h2>
-                    <p className="text-muted-foreground leading-relaxed text-base">
+                  <div className="bg-muted/30 p-6 md:p-8 rounded-lg">
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-6">Kim Jesteśmy?</h2>
+                    <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                       Jako modu.energy działamy w obszarze optymalizacji energetycznej dla firm B2B, 
                       specjalizując się w instalacjach i obsłudze przemysłowych i komercyjnych systemów 
                       magazynowania energii. Działamy w ramach spółki RenewPacks sp. z o.o. z siedzibą 
@@ -36,9 +36,9 @@ const ONas = () => {
                   </div>
 
                   {/* Kolumna 2: Nasza historia i doświadczenie */}
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-4">Nasza Historia i Doświadczenie</h2>
-                    <p className="text-muted-foreground leading-relaxed text-base">
+                  <div className="bg-muted/30 p-6 md:p-8 rounded-lg">
+                    <h2 className="text-2xl md:text-3xl font-semibold mb-6">Nasza Historia i Doświadczenie</h2>
+                    <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                       Jesteśmy nowi na polskim rynku, co pozwala nam wprowadzać świeże, nowoczesne 
                       podejścia do zarządzania energią – bez balastu przestarzałych modeli. Nasza siła 
                       tkwi w transferze wiedzy z rynku brytyjskiego, gdzie zdobywaliśmy doświadczenie 
@@ -49,7 +49,7 @@ const ONas = () => {
                   </div>
                 </div>
               </div>
-          
+            </div>
           </div>
         </section>
       </main>
