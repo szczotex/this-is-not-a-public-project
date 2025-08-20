@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug } from "lucide-react";
 import Header from "@/components/Header";
@@ -7,12 +7,12 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground page-texture">
       <Header />
 
-      <main className="w-full overflow-x-hidden"> {/* Dodano overflow-x-hidden */}
-        {/* Hero - pełna szerokość */}
-        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+      <main>
+        {/* Hero - USUNIĘTO KONTENER */}
+         <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
               src="/background.jpg"
@@ -37,8 +37,7 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Features - pełna szerokość */}
+        {/* Features - USUNIĘTO KONTENER */}
         <section className="relative py-12 md:py-20 bg-muted/40 border-t">
           <div className="w-full px-4">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
@@ -81,8 +80,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ICP - poprawione wyrównanie */}
-        <section className="relative py-12 md:py-20 bg-background border-t">
+        {/* ICP - ZMIENIONO NA 4 ELEMENTY 2x2 */}
+       <section className="relative py-12 md:py-20 bg-background border-t">
           <div className="w-full px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">Jakich firm szukamy?</h2>
@@ -115,48 +114,48 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Form CTA - pełna szerokość */}
+
+        {/* Form CTA */}
         <section id="formularz" className="relative py-16 md:py-24 bg-muted/40 border-t">
-          <div className="w-full px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-2xl md:text-3xl text-center">Sprawdź ile możesz oszczędzić</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-4">
-                  <div className="grid gap-6 md:grid-cols-2 items-start">
-                    <div>
-                      <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
-                        <li>darmowa ocena</li>
-                        <li>oparta na dostarczonych informacjach</li>
-                        <li>zero zobowiązań</li>
-                        <li>szybka odpowiedź</li>
-                      </ul>
-                      <div className="mt-6">
-                        <Button asChild variant="hero" size="lg">
-                          <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Sprawdź potencjalne zyski</a>
-                        </Button>
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Masz pytania?</h3>
-                      <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
-                        <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
-                        <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
-                      </div>
+          <div className="container">
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-2xl md:text-3xl">Sprawdź ile możesz oszczędzić</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="grid gap-6 md:grid-cols-2 items-start">
+                  <div>
+                    <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
+                      <li>darmowa ocena</li>
+                      <li>oparta na dostarczonych informacjach</li>
+                      <li>zero zobowiązań</li>
+                      <li>szybka odpowiedź</li>
+                    </ul>
+                    <div className="mt-6">
+                      <Button asChild variant="hero" size="lg">
+                        <a href="https://tally.so/r/mV6Jvl" target="_blank" rel="noopener noreferrer">Sprawdź potencjalne zyski</a>
+                      </Button>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">Masz pytania?</h3>
+                    <div className="mt-2 text-muted-foreground text-base md:text-lg space-y-1">
+                      <p>email: <a href="mailto:kontakt@modu.energy" className="underline">kontakt@modu.energy</a></p>
+                      <p>telefon: <a href="tel:+48668345897" className="underline">+48 668 345 897</a></p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
         
-        {/* FAQ Section - pełna szerokość */}
-        <section className="relative py-16 md:py-24 bg-background border-t">
+        {/* FAQ Section */}
+          <section className="relative py-16 md:py-24 bg-background border-t">
           <div className="w-full px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">FAQ</h2>
+            <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
                 <AccordionContent>modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
@@ -296,6 +295,7 @@ const Index = () => {
               }}
             ></script>
           </div>
+        </div>
         </section>
       </main>
 
