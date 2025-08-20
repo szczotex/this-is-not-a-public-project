@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug, Timer, TrendingUp } from "lucide-react";
+import { HandCoins, Wrench, BatteryCharging, Sun, Gauge, Factory, Plug } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -11,7 +11,7 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero */}
+        {/* Hero - USUNIĘTO KONTENER */}
         <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
@@ -23,6 +23,7 @@ const Index = () => {
             />
             <div className="absolute inset-0 bg-foreground/60" />
           </div>
+          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI */}
           <div className="w-full px-4 py-20 md:py-28">
             <div className="mx-auto max-w-4xl text-center animate-enter text-primary-foreground">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
@@ -38,8 +39,9 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Features */}
+        {/* Features - USUNIĘTO KONTENER */}
         <section className="relative py-12 md:py-20 bg-muted/40 page-texture border-t">
+          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI */}
           <div className="w-full px-4">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
               Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
@@ -81,14 +83,14 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ICP */}
+        {/* ICP - ZMIENIONO NA 4 ELEMENTY 2x2 */}
         <section className="relative py-12 md:py-20 bg-background page-texture border-t">
           <div className="container">
             <div className="mx-auto max-w-4xl">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">Jakich firm szukamy?</h2>
               <Card>
                 <CardContent className="pt-6">
-                  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 justify-items-start">
+                  <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-items-start">
                     <div className="flex items-center gap-3 text-sm">
                       <Sun aria-hidden className="text-foreground" />
                       <span>istniejąca fotowoltaika</span>
@@ -99,20 +101,11 @@ const Index = () => {
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Gauge aria-hidden className="text-foreground" />
-                      <span className="text-left">wysoki pobór mocy <br/>
-(&gt;100MWh rocznie)</span>
+                      <span className="text-left">wysokie zużycie energii<br/>(&gt;100MWh rocznie)</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Plug aria-hidden className="text-foreground" />
                       <span>duża moc przyłącza</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm">
-                      <Timer aria-hidden className="text-foreground" />
-                      <span>taryfa wielostrefowa</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm">
-                      <TrendingUp aria-hidden className="text-foreground" />
-                      <span>wysokie koszta energii</span>
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">
@@ -160,8 +153,9 @@ const Index = () => {
         </section>
         
         {/* FAQ Section */}
-        <section className="relative py-16 md:py-24 bg-background page-texture border-t">
-          <div className="w-full px-4 max-w-3xl">
+         <section className="relative py-16 md:py-24 bg-background page-texture border-t">
+          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI I WYŚRODKOWANIEM */}
+          <div className="w-full px-4 max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">FAQ</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
