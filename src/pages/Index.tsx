@@ -157,62 +157,62 @@ const Index = () => {
           <div className="w-full px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center">FAQ</h2>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full text-left">
               <AccordionItem value="item-1">
-                <AccordionTrigger>Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
-                <AccordionContent>modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
+                <AccordionTrigger className="text-left">Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
+                <AccordionContent className="text-left">modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>W jaki sposób modu.energy oszczędza do 25% kosztów energii w mojej firmie?</AccordionTrigger>
-                <AccordionContent>modu.energy osiąga oszczędności i generuje dodatkowy przychód dla klientów poprzez dwa główne kanały. Po pierwsze, zainstalowany na miejscu system magazynowania energii optymalizuje lokalne zużycie, redukując szczyty obciążenia i opłaty mocowe oraz zwiększając autokonsumpcję. Po drugie, elastyczność magazynu energii umożliwia aktywny udział w generacji przychodów z usług wspierających sieć.</AccordionContent>
+                <AccordionTrigger className="text-left">W jaki sposób modu.energy oszczędza do 25% kosztów energii w mojej firmie?</AccordionTrigger>
+                <AccordionContent className="text-left">modu.energy osiąga oszczędności i generuje dodatkowy przychód dla klientów poprzez dwa główne kanały. Po pierwsze, zainstalowany na miejscu system magazynowania energii optymalizuje lokalne zużycie, redukując szczyty obciążenia i opłaty mocowe oraz zwiększając autokonsumpcję. Po drugie, elastyczność magazynu energii umożliwia aktywny udział w generacji przychodów z usług wspierających sieć.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Jak modu.energy zarabia na współpracy?</AccordionTrigger>
-                <AccordionContent>Nasz model biznesowy opiera się na współdzieleniu oszczędności i przychodów z udziału w rynkach energii. W ten sposób generujemy przychody, które dzielimy z klientem zgodnie z ustaleniami umowy.</AccordionContent>
+                <AccordionTrigger className="text-left">Jak modu.energy zarabia na współpracy?</AccordionTrigger>
+                <AccordionContent className="text-left">Nasz model biznesowy opiera się na współdzieleniu oszczędności i przychodów z udziału w rynkach energii. W ten sposób generujemy przychody, które dzielimy z klientem zgodnie z ustaleniami umowy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger>Jakie jest ryzyko dla klienta?</AccordionTrigger>
-                <AccordionContent>Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Oszczędność z tytułu magazynu energii jest stała, zgodnie z ustaleniami umowy.</AccordionContent>
+                <AccordionTrigger className="text-left">Jakie jest ryzyko dla klienta?</AccordionTrigger>
+                <AccordionContent className="text-left">Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Oszczędność z tytułu magazynu energii jest stała, zgodnie z ustaleniami umowy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>Czy modu.energy wymaga zmiany dostawcy energii?</AccordionTrigger>
-                <AccordionContent>Nie, ale wymagamy conajmniej dwu-strefowych taryf obecnego sprzedawcy. W wypadku stałych cen, wspieramy w zmianie obecnej umowy na bardziej korzystną dla klienta.</AccordionContent>
+                <AccordionTrigger className="text-left">Czy modu.energy wymaga zmiany dostawcy energii?</AccordionTrigger>
+                <AccordionContent className="text-left">Nie, ale wymagamy conajmniej dwu-strefowych taryf obecnego sprzedawcy. W wypadku stałych cen, wspieramy w zmianie obecnej umowy na bardziej korzystną dla klienta.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
-                <AccordionTrigger>Czy modu.energy jest dostawcą energii?</AccordionTrigger>
-                <AccordionContent>Obecnie modu.energy nie jest dostawcą energii - nasze rozwiązania działają niezależnie od istniejącego dostawcy. Naszym głównym zadaniem jest instalacja i obsługa systemów magazynowania energii, które pozwalają na optymalizację kosztów i udział w rynku energii. W przyszłości planujemy jednak oferować model Energy-as-a-Service (EaaS), w którym będziemy zarządzać całością potrzeb energetycznych naszych klientów, najtaniej na rynku.</AccordionContent>
+                <AccordionTrigger className="text-left">Czy modu.energy jest dostawcą energii?</AccordionTrigger>
+                <AccordionContent className="text-left">Obecnie modu.energy nie jest dostawcą energii - nasze rozwiązania działają niezależnie od istniejącego dostawcy. Naszym głównym zadaniem jest instalacja i obsługa systemów magazynowania energii, które pozwalają na optymalizację kosztów i udział w rynku energii. W przyszłości planujemy jednak oferować model Energy-as-a-Service (EaaS), w którym będziemy zarządzać całością potrzeb energetycznych naszych klientów, najtaniej na rynku.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-7">
-                <AccordionTrigger>Kto jest właścicielem i kto zarządza systemami magazynowania energii modu.energy?</AccordionTrigger>
-                <AccordionContent>modu.energy jest zarówno właścicielem jak i podmiotem odpowiedzialnym za zarządzanie systemami magazynowania energii zainstalowanymi u klienta.</AccordionContent>
+                <AccordionTrigger className="text-left">Kto jest właścicielem i kto zarządza systemami magazynowania energii modu.energy?</AccordionTrigger>
+                <AccordionContent className="text-left">modu.energy jest zarówno właścicielem jak i podmiotem odpowiedzialnym za zarządzanie systemami magazynowania energii zainstalowanymi u klienta.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-8">
-                <AccordionTrigger>Jak przebiega instalacja?</AccordionTrigger>
-                <AccordionContent>Nasz zespół zajmuje się kompleksową realizacją projektu: od oceny lokalizacji, przez transport, aż po montaż i uruchomienie systemu. Korzystamy z zaufanych partnerów i zapewniamy pełną integrację z istniejącą infrastrukturą energetyczną firmy. Cały proces trwa zwykle od 3 do 6 miesięcy, przy minimalnym wpływie na działalność Twojej firmy.</AccordionContent>
+                <AccordionTrigger className="text-left">Jak przebiega instalacja?</AccordionTrigger>
+                <AccordionContent className="text-left">Nasz zespół zajmuje się kompleksową realizacją projektu: od oceny lokalizacji, przez transport, aż po montaż i uruchomienie systemu. Korzystamy z zaufanych partnerów i zapewniamy pełną integrację z istniejącą infrastrukturą energetyczną firmy. Cały proces trwa zwykle od 3 do 6 miesięcy, przy minimalnym wpływie na działalność Twojej firmy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-9">
-                <AccordionTrigger>Jakie pozwolenia i regulacje obsługujecie?</AccordionTrigger>
-                <AccordionContent>Koordynujemy wszystkie formalności z operatorami sieci dystrybucyjnej i lokalnymi urzędami, zapewniając pełną zgodność z obowiązującymi normami, w tym dotyczącymi bezpieczeństwa. Operatorzy sieci pozytywnie postrzegają nasze systemy, ponieważ przyczyniają się one do stabilizacji lokalnej sieci i optymalizacji obciążeń.</AccordionContent>
+                <AccordionTrigger className="text-left">Jakie pozwolenia i regulacje obsługujecie?</AccordionTrigger>
+                <AccordionContent className="text-left">Koordynujemy wszystkie formalności z operatorami sieci dystrybucyjnej i lokalnymi urzędami, zapewniając pełną zgodność z obowiązującymi normami, w tym dotyczącymi bezpieczeństwa. Operatorzy sieci pozytywnie postrzegają nasze systemy, ponieważ przyczyniają się one do stabilizacji lokalnej sieci i optymalizacji obciążeń.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-10">
-                <AccordionTrigger>Jakiego typu magazyny energii wykorzystujecie?</AccordionTrigger>
-                <AccordionContent>Stosujemy nowoczesne baterie litowo-jonowe o wysokiej gęstości energii, dużej trwałości i niskich stratach energii. Są one niezawodne i efektywne dla instalacji przemysłowych zintegrowanych z siecią, zapewniając szybkie ładowanie i wysoką elastyczność pracy.</AccordionContent>
+                <AccordionTrigger className="text-left">Jakiego typu magazyny energii wykorzystujecie?</AccordionTrigger>
+                <AccordionContent className="text-left">Stosujemy nowoczesne baterie litowo-jonowe o wysokiej gęstości energii, dużej trwałości i niskich stratach energii. Są one niezawodne i efektywne dla instalacji przemysłowych zintegrowanych z siecią, zapewniając szybkie ładowanie i wysoką elastyczność pracy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-11">
-                <AccordionTrigger>Jak wygląda serwisowanie?</AccordionTrigger>
-                <AccordionContent>Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu.</AccordionContent>
+                <AccordionTrigger className="text-left">Jak wygląda serwisowanie?</AccordionTrigger>
+                <AccordionContent className="text-left">Zapewniamy całodobowy monitoring, regularne przeglądy oraz szybką i proaktywną obsługę serwisową. Nasz system wspierany przez sztuczną inteligencję na bieżąco analizuje dane i wykrywa możliwe problemy, aby zagwarantować maksymalną dostępność i niezawodność systemu.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-12">
-                <AccordionTrigger>Czy modu.energy współpracuje z istniejącymi źródłami energii?</AccordionTrigger>
-                <AccordionContent>Tak – nasze rozwiązania magazynowania energii są elastyczne i mogą integrować i optymalizować energię generowaną z zainstalowanych u klienta źródeł. Dzięki temu możemy zaoferować użytkownikowi maksymalne oszczędności.</AccordionContent>
+                <AccordionTrigger className="text-left">Czy modu.energy współpracuje z istniejącymi źródłami energii?</AccordionTrigger>
+                <AccordionContent className="text-left">Tak – nasze rozwiązania magazynowania energii są elastyczne i mogą integrować i optymalizować energię generowaną z zainstalowanych u klienta źródeł. Dzięki temu możemy zaoferować użytkownikowi maksymalne oszczędności.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-13">
-                <AccordionTrigger>Jak modu.energy dba o bezpieczeństwo i zgodność z przepisami?</AccordionTrigger>
-                <AccordionContent>Wszystkie instalacje są projektowane w zgodzie z obowiązującymi normami bezpieczeństwa i lokalnymi regulacjami. Koordynujemy proces uzyskania pozwoleń oraz współpracujemy z operatorami sieci dystrybucyjnej.</AccordionContent>
+                <AccordionTrigger className="text-left">Jak modu.energy dba o bezpieczeństwo i zgodność z przepisami?</AccordionTrigger>
+                <AccordionContent className="text-left">Wszystkie instalacje są projektowane w zgodzie z obowiązującymi normami bezpieczeństwa i lokalnymi regulacjami. Koordynujemy proces uzyskania pozwoleń oraz współpracujemy z operatorami sieci dystrybucyjnej.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-14">
-                <AccordionTrigger>Jak rozpocząć współpracę?</AccordionTrigger>
-                <AccordionContent>Skontaktuj się z nami poprzez udostępniony formularz, aby uzyskać bezpłatną analizę możliwości i oszczędności dostosowaną do Twojej firmy. Przedstawimy model współpracy i konkretne oszczędności które możemy wypracować.</AccordionContent>
+                <AccordionTrigger className="text-left">Jak rozpocząć współpracę?</AccordionTrigger>
+                <AccordionContent className="text-left">Skontaktuj się z nami poprzez udostępniony formularz, aby uzyskać bezpłatną analizę możliwości i oszczędności dostosowaną do Twojej firmy. Przedstawimy model współpracy i konkretne oszczędności które możemy wypracować.</AccordionContent>
               </AccordionItem>
             </Accordion>
             <script
