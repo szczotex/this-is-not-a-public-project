@@ -46,9 +46,9 @@ const Index = () => {
               Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
             </h2>
             <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
-              <Card className="transition-transform duration-200 hover:scale-[1.02]">
+              <Card className="transition-transform duration-200 hover:scale-[1.02] text-center">
                 <CardHeader>
-                  <div className="flex items-center gap-3">
+                  <div className="flex  items-center justify-center gap-3">
                     <HandCoins className="text-foreground" />
                     <CardTitle className="text-lg md:text-xl">
                       Finansujemy całość<br />inwestycji
