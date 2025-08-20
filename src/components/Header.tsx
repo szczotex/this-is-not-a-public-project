@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   return (
     <header className="border-b bg-white">
-      <div className="w-full px-4 sm:px-6 max-w-7xl mx-auto flex items-center justify-between py-4">
-        <div className="flex items-center gap-4 sm:gap-6">
-          <a href="/" className="flex items-center flex-shrink-0" aria-label="Strona główna modu.energy">
+      <div className="container flex items-center justify-between py-4">
+        <div className="flex items-center gap-6">
+          <a href="/" className="flex items-center" aria-label="Strona główna modu.energy">
             <img
               src="/modu-logo.png"
               alt="modu.energy logo"
@@ -15,17 +15,17 @@ const Header = () => {
               }}
             />
           </a>
-          <nav aria-label="Główna nawigacja" className="hidden sm:block">
+          <nav aria-label="Główna nawigacja">
             <a href="/o-nas" className="text-sm font-medium hover:underline">
               O nas
             </a>
           </nav>
         </div>
          <div className="hidden sm:block">
-        <Button asChild variant="hero" size="sm" className="text-xs sm:text-sm">
+        <Button asChild variant="hero" size="sm">
           <a href="/#formularz" aria-label="Przejdź do formularza">Sprawdź potencjalne zyski</a>
         </Button>
-        </div>
+      </div>
       </div>
     </header>
   );
