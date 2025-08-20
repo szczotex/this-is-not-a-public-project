@@ -12,7 +12,7 @@ const Index = () => {
 
       <main>
         {/* Hero - USUNIĘTO KONTENER */}
-         <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+        <section className="relative isolate min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
             <img
               src="/background.jpg"
@@ -23,8 +23,9 @@ const Index = () => {
             />
             <div className="absolute inset-0 bg-foreground/60" />
           </div>
+          {/* USUNIĘTO KONTENER - ZASTĄPIONO PADDINGAMI */}
           <div className="w-full px-4 py-20 md:py-28">
-            <div className="max-w-4xl mx-auto text-center animate-enter text-primary-foreground">
+            <div className="mx-auto max-w-4xl text-center animate-enter text-primary-foreground">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                  Obniż koszty energii dla swojej firmy, nawet do 25%
                </h1>
@@ -37,6 +38,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+
         {/* Features - USUNIĘTO KONTENER */}
         <section className="relative py-12 md:py-20 bg-muted/40 border-t">
           <div className="w-full px-4">
