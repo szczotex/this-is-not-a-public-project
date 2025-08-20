@@ -48,9 +48,9 @@ const Index = () => {
             <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
               <Card className="transition-transform duration-200 hover:scale-[1.02] text-center">
                 <CardHeader>
-                  <div className="flex  items-center justify-center gap-3">
-                    <HandCoins className="text-foreground" />
-                    <CardTitle className="text-lg md:text-xl">
+                  <div className="flex  items-center justify-center gap-3 relative">
+                    <HandCoins className="text-foreground absolute left-0" />
+                    <CardTitle className="text-lg md:text-xl pl-8">
                       Finansujemy całość<br />inwestycji
                     </CardTitle>
                   </div>
@@ -59,9 +59,9 @@ const Index = () => {
 
               <Card className="transition-transform duration-200 hover:scale-[1.02]">
                 <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <Wrench className="text-foreground" />
-                    <CardTitle className="text-lg md:text-xl">
+                  <div className="flex items-center gap-3 relative">
+                    <Wrench className="text-foreground absolute left-0" />
+                    <CardTitle className="text-lg md:text-xl pl-8">
                       Załatwiamy formalności i instalację za Ciebie
                     </CardTitle>
                   </div>
@@ -70,9 +70,9 @@ const Index = () => {
 
               <Card className="transition-transform duration-200 hover:scale-[1.02]">
                 <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <BatteryCharging className="text-foreground" />
-                    <CardTitle className="text-lg md:text-xl">
+                  <div className="flex items-center gap-3 relative">
+                    <BatteryCharging className="text-foreground absolute left-0" />
+                    <CardTitle className="text-lg md:text-xl pl-8">
                       Dzielimy się zyskami z magazynu
                     </CardTitle>
                   </div>
