@@ -14,13 +14,16 @@ export default {
 			center: true,
 			padding: '1rem',
 			screens: {
+				sm: '100%',
+				md: '100%',
+				lg: '1024px',
+				xl: '1280px',
 				'2xl': '1400px'
 			}
 		},
 		extend: {
-			// DODANO: Rozszerzenie o max-w-7xl
 			maxWidth: {
-				'7xl': '80rem', // 1280px
+				'7xl': '80rem',
 			},
 			colors: {
 				border: 'hsl(var(--border))',
