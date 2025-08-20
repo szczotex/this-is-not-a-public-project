@@ -129,7 +129,6 @@ const Index = () => {
                   <div>
                     <ul className="mt-2 list-disc pl-5 space-y-2 text-muted-foreground text-left">
                       <li>darmowa ocena</li>
-                      <li>oparta na dostarczonych informacjach</li>
                       <li>zero zobowiązań</li>
                       <li>szybka odpowiedź</li>
                     </ul>
