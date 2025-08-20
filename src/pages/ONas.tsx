@@ -24,7 +24,7 @@ const ONas = () => {
                 {/* Sekcja 2: Dwie kolumny */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-12">
                   {/* Kolumna 1: Kim jesteśmy? */}
-                  <div className="bg-muted/30 p-6 md:p-8 rounded-lg">
+                  <div>
                     <h2 className="text-2xl md:text-3xl font-semibold mb-6">Kim Jesteśmy?</h2>
                     <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                       Jako modu.energy działamy w obszarze optymalizacji energetycznej dla firm B2B, 
@@ -35,7 +35,7 @@ const ONas = () => {
                   </div>
 
                   {/* Kolumna 2: Nasza historia i doświadczenie */}
-                  <div className="bg-muted/30 p-6 md:p-8 rounded-lg">
+                  <div>
                     <h2 className="text-2xl md:text-3xl font-semibold mb-6">Nasza Historia i Doświadczenie</h2>
                     <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                       Jesteśmy nowi na polskim rynku, co pozwala nam wprowadzać świeże, nowoczesne 
