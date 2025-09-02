@@ -43,7 +43,7 @@ const Index = () => {
         <section className="relative py-12 md:py-20 bg-muted/40 border-t">
           <div className="w-full px-4">
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-6">
-              Instalujemy i operujemy magazyny energii, wykorzystując istniejący przyłącz.
+              Oferujemy najniższe ceny prądu dla firm. 
             </h2>
             <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
               <Card className="transition-transform duration-200 hover:scale-[1.02] text-center">
@@ -51,7 +51,7 @@ const Index = () => {
                   <div className="flex  items-center justify-center gap-3 relative">
                     <HandCoins className="text-foreground absolute left-0" />
                     <CardTitle className="text-lg md:text-xl pl-8">
-                      Finansujemy całość<br />inwestycji
+                      Załatwiamy formalności, instalację i finansowanie
                     </CardTitle>
                   </div>
                 </CardHeader>
@@ -62,7 +62,7 @@ const Index = () => {
                   <div className="flex items-center gap-3 relative">
                     <Wrench className="text-foreground absolute left-0" />
                     <CardTitle className="text-lg md:text-xl pl-8">
-                      Załatwiamy formalności i instalację za Ciebie
+                      Wykorzystujemy AI i własny magazyn energii
                     </CardTitle>
                   </div>
                 </CardHeader>
@@ -73,7 +73,7 @@ const Index = () => {
                   <div className="flex items-center gap-3 relative">
                     <BatteryCharging className="text-foreground absolute left-0" />
                     <CardTitle className="text-lg md:text-xl pl-8">
-                      Dzielimy się zyskami z magazynu
+                      Optymalizujemy Twoje zużycie prądu
                     </CardTitle>
                   </div>
                 </CardHeader>
@@ -159,7 +159,7 @@ const Index = () => {
             <Accordion type="single" collapsible className="w-full text-left">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left">Czym jest modu.energy i jak może pomóc mojej firmie?</AccordionTrigger>
-                <AccordionContent className="text-left">modu.energy oferuje kompleksowe systemy magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
+                <AccordionContent className="text-left">modu.energy jest nowoczesnym dostawcą energii, operującym na kompleksowych systemach magazynowania energii, optymalizując zużycie energii firm B2B, celem obniżki kosztów nawet do 25%.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left">W jaki sposób modu.energy oszczędza do 25% kosztów energii w mojej firmie?</AccordionTrigger>
@@ -167,15 +167,15 @@ const Index = () => {
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left">Jak modu.energy zarabia na współpracy?</AccordionTrigger>
-                <AccordionContent className="text-left">Nasz model biznesowy opiera się na współdzieleniu oszczędności i przychodów z udziału w rynkach energii. W ten sposób generujemy przychody, które dzielimy z klientem zgodnie z ustaleniami umowy.</AccordionContent>
+                <AccordionContent className="text-left">Nasza unikalna oferta stałej stawki za energię elektryczną + system magazynowania baterii jest zaprojektowana, aby wykorzystać ogromne różnice w cenach energii, pozwalając nam pobierać energię z sieci w godzinach poza szczytem, a następnie konsumować lub wysyłać do sieci, gdy ceny są wyższe. Ten własny system zarządzania energią pozwala nam nie tylko zmniejszyć koszty energii naszych klientów, ale także wspierać sieć energetyczną, gdy występuje znaczne obciążenie z powodu zwiększonego popytu.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left">Jakie jest ryzyko dla klienta?</AccordionTrigger>
-                <AccordionContent className="text-left">Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Oszczędność z tytułu magazynu energii jest stała, zgodnie z ustaleniami umowy.</AccordionContent>
+                <AccordionContent className="text-left">Nie ma ukrytych kosztów ani zobowiązań finansowych ze strony klienta. Instalacja, eksploatacja i serwis systemu są prowadzone przez modu.energy. Końcowa cena za dostarczoną kWh jest stała, zgodnie z ustaleniami umowy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-left">Czy modu.energy wymaga zmiany dostawcy energii?</AccordionTrigger>
-                <AccordionContent className="text-left">Nie, ale wymagamy conajmniej dwu-strefowych taryf obecnego sprzedawcy. W wypadku stałych cen, wspieramy w zmianie obecnej umowy na bardziej korzystną dla klienta.</AccordionContent>
+                <AccordionContent className="text-left">Wymagamy zmiany dostawcy energii, tylko jeśli nie masz bardziej korzystnej oferty. W takim wypadku, możemy wciąż zaoferować obniżkę kosztów - jednak mniejszą niż w wypadku pełnej współpracy.</AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-6">
                 <AccordionTrigger className="text-left">Czy modu.energy jest dostawcą energii?</AccordionTrigger>
